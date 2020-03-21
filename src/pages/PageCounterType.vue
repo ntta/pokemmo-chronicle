@@ -75,8 +75,7 @@ export default {
         { type: 'ghost', factor: 1 },
         { type: 'dragon', factor: 1 },
         { type: 'dark', factor: 1 },
-        { type: 'steel', factor: 1 },
-        { type: 'fairy', factor: 1 }
+        { type: 'steel', factor: 1 }
       ]
     }
   },
@@ -85,6 +84,9 @@ export default {
   },
   methods: {
     addToSelectedTypes (type) {
+      if (this.selectedTypes.length === 2) {
+        return
+      }
       this.selectedTypes.push(type)
       for (var i in type.weakness) {
         for (var j in this.totalWeakness) {
@@ -95,7 +97,7 @@ export default {
       }
     },
     removeFromSelectedTypes (type) {
-      this.selectedTypes.pop(type)
+      this.selectedTypes[0].name === type.name ? this.selectedTypes.shift() : this.selectedTypes.pop()
       for (var i in this.totalWeakness) {
         this.totalWeakness[i].factor = 1
       }

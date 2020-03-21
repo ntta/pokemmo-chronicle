@@ -19,8 +19,7 @@ const state = {
         { name: 'ghost', factor: 1 },
         { name: 'dragon', factor: 1 },
         { name: 'dark', factor: 1 },
-        { name: 'steel', factor: 1 },
-        { name: 'fairy', factor: 1 }
+        { name: 'steel', factor: 1 }
       ]
     },
     'TypeID02': {
@@ -42,8 +41,7 @@ const state = {
         { name: 'ghost', factor: 0.5 },
         { name: 'dragon', factor: 1 },
         { name: 'dark', factor: 0.5 },
-        { name: 'steel', factor: 1 },
-        { name: 'fairy', factor: 2 }
+        { name: 'steel', factor: 1 }
       ]
     },
     'TypeID03': {
@@ -65,8 +63,7 @@ const state = {
         { name: 'ghost', factor: 1 },
         { name: 'dragon', factor: 2 },
         { name: 'dark', factor: 1 },
-        { name: 'steel', factor: 1 },
-        { name: 'fairy', factor: 2 }
+        { name: 'steel', factor: 1 }
       ]
     },
     'TypeID04': {
@@ -88,34 +85,10 @@ const state = {
         { name: 'ghost', factor: 1 },
         { name: 'dragon', factor: 1 },
         { name: 'dark', factor: 1 },
-        { name: 'steel', factor: 0.5 },
-        { name: 'fairy', factor: 1 }
+        { name: 'steel', factor: 0.5 }
       ]
     },
     'TypeID05': {
-      name: 'fairy',
-      weakness: [
-        { name: 'normal', factor: 1 },
-        { name: 'fire', factor: 1 },
-        { name: 'water', factor: 1 },
-        { name: 'electric', factor: 1 },
-        { name: 'grass', factor: 1 },
-        { name: 'ice', factor: 1 },
-        { name: 'fighting', factor: 0.5 },
-        { name: 'poison', factor: 2 },
-        { name: 'ground', factor: 1 },
-        { name: 'flying', factor: 1 },
-        { name: 'psychic', factor: 1 },
-        { name: 'bug', factor: 0.5 },
-        { name: 'rock', factor: 1 },
-        { name: 'ghost', factor: 1 },
-        { name: 'dragon', factor: 0 },
-        { name: 'dark', factor: 0.5 },
-        { name: 'steel', factor: 2 },
-        { name: 'fairy', factor: 1 }
-      ]
-    },
-    'TypeID06': {
       name: 'fighting',
       weakness: [
         { name: 'normal', factor: 1 },
@@ -134,11 +107,10 @@ const state = {
         { name: 'ghost', factor: 1 },
         { name: 'dragon', factor: 1 },
         { name: 'dark', factor: 0.5 },
-        { name: 'steel', factor: 1 },
-        { name: 'fairy', factor: 2 }
+        { name: 'steel', factor: 1 }
       ]
     },
-    'TypeID07': {
+    'TypeID06': {
       name: 'fire',
       weakness: [
         { name: 'normal', factor: 1 },
@@ -157,11 +129,10 @@ const state = {
         { name: 'ghost', factor: 1 },
         { name: 'dragon', factor: 1 },
         { name: 'dark', factor: 1 },
-        { name: 'steel', factor: 0.5 },
-        { name: 'fairy', factor: 0.5 }
+        { name: 'steel', factor: 0.5 }
       ]
     },
-    'TypeID08': {
+    'TypeID07': {
       name: 'flying',
       weakness: [
         { name: 'normal', factor: 1 },
@@ -180,11 +151,10 @@ const state = {
         { name: 'ghost', factor: 1 },
         { name: 'dragon', factor: 1 },
         { name: 'dark', factor: 1 },
-        { name: 'steel', factor: 1 },
-        { name: 'fairy', factor: 1 }
+        { name: 'steel', factor: 1 }
       ]
     },
-    'TypeID09': {
+    'TypeID08': {
       name: 'ghost',
       weakness: [
         { name: 'normal', factor: 0 },
@@ -203,11 +173,10 @@ const state = {
         { name: 'ghost', factor: 2 },
         { name: 'dragon', factor: 1 },
         { name: 'dark', factor: 2 },
-        { name: 'steel', factor: 1 },
-        { name: 'fairy', factor: 1 }
+        { name: 'steel', factor: 1 }
       ]
     },
-    'TypeID10': {
+    'TypeID09': {
       name: 'grass',
       weakness: [
         { name: 'normal', factor: 1 },
@@ -226,11 +195,10 @@ const state = {
         { name: 'ghost', factor: 1 },
         { name: 'dragon', factor: 1 },
         { name: 'dark', factor: 1 },
-        { name: 'steel', factor: 1 },
-        { name: 'fairy', factor: 1 }
+        { name: 'steel', factor: 1 }
       ]
     },
-    'TypeID11': {
+    'TypeID10': {
       name: 'ground',
       weakness: [
         { name: 'normal', factor: 1 },
@@ -249,11 +217,10 @@ const state = {
         { name: 'ghost', factor: 1 },
         { name: 'dragon', factor: 1 },
         { name: 'dark', factor: 1 },
-        { name: 'steel', factor: 1 },
-        { name: 'fairy', factor: 1 }
+        { name: 'steel', factor: 1 }
       ]
     },
-    'TypeID12': {
+    'TypeID11': {
       name: 'ice',
       weakness: [
         { name: 'normal', factor: 1 },
@@ -272,11 +239,10 @@ const state = {
         { name: 'ghost', factor: 1 },
         { name: 'dragon', factor: 1 },
         { name: 'dark', factor: 1 },
-        { name: 'steel', factor: 2 },
-        { name: 'fairy', factor: 1 }
+        { name: 'steel', factor: 2 }
       ]
     },
-    'TypeID13': {
+    'TypeID12': {
       name: 'normal',
       weakness: [
         { name: 'normal', factor: 1 },
@@ -295,11 +261,10 @@ const state = {
         { name: 'ghost', factor: 0 },
         { name: 'dragon', factor: 1 },
         { name: 'dark', factor: 1 },
-        { name: 'steel', factor: 1 },
-        { name: 'fairy', factor: 1 }
+        { name: 'steel', factor: 1 }
       ]
     },
-    'TypeID14': {
+    'TypeID13': {
       name: 'poison',
       weakness: [
         { name: 'normal', factor: 1 },
@@ -318,11 +283,10 @@ const state = {
         { name: 'ghost', factor: 1 },
         { name: 'dragon', factor: 1 },
         { name: 'dark', factor: 1 },
-        { name: 'steel', factor: 1 },
-        { name: 'fairy', factor: 0.5 }
+        { name: 'steel', factor: 1 }
       ]
     },
-    'TypeID15': {
+    'TypeID14': {
       name: 'psychic',
       weakness: [
         { name: 'normal', factor: 1 },
@@ -341,11 +305,10 @@ const state = {
         { name: 'ghost', factor: 2 },
         { name: 'dragon', factor: 1 },
         { name: 'dark', factor: 2 },
-        { name: 'steel', factor: 1 },
-        { name: 'fairy', factor: 1 }
+        { name: 'steel', factor: 1 }
       ]
     },
-    'TypeID16': {
+    'TypeID15': {
       name: 'rock',
       weakness: [
         { name: 'normal', factor: 0.5 },
@@ -364,11 +327,10 @@ const state = {
         { name: 'ghost', factor: 1 },
         { name: 'dragon', factor: 1 },
         { name: 'dark', factor: 1 },
-        { name: 'steel', factor: 2 },
-        { name: 'fairy', factor: 1 }
+        { name: 'steel', factor: 2 }
       ]
     },
-    'TypeID17': {
+    'TypeID16': {
       name: 'steel',
       weakness: [
         { name: 'normal', factor: 0.5 },
@@ -384,14 +346,13 @@ const state = {
         { name: 'psychic', factor: 0.5 },
         { name: 'bug', factor: 0.5 },
         { name: 'rock', factor: 0.5 },
-        { name: 'ghost', factor: 1 },
+        { name: 'ghost', factor: 0.5 },
         { name: 'dragon', factor: 0.5 },
-        { name: 'dark', factor: 1 },
-        { name: 'steel', factor: 0.5 },
-        { name: 'fairy', factor: 0.5 }
+        { name: 'dark', factor: 0.5 },
+        { name: 'steel', factor: 0.5 }
       ]
     },
-    'TypeID18': {
+    'TypeID17': {
       name: 'water',
       weakness: [
         { name: 'normal', factor: 1 },
@@ -399,7 +360,7 @@ const state = {
         { name: 'water', factor: 0.5 },
         { name: 'electric', factor: 2 },
         { name: 'grass', factor: 2 },
-        { name: 'ice', factor: 1 },
+        { name: 'ice', factor: 0.5 },
         { name: 'fighting', factor: 1 },
         { name: 'poison', factor: 1 },
         { name: 'ground', factor: 1 },
@@ -410,8 +371,7 @@ const state = {
         { name: 'ghost', factor: 1 },
         { name: 'dragon', factor: 1 },
         { name: 'dark', factor: 1 },
-        { name: 'steel', factor: 0.5 },
-        { name: 'fairy', factor: 1 }
+        { name: 'steel', factor: 0.5 }
       ]
     }
   }

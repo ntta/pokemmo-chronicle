@@ -12,7 +12,7 @@
         /> -->
 
         <q-toolbar-title class="absolute-center">
-          Counter Pokemon Type
+          PokeMMO Chronicle
         </q-toolbar-title>
       </q-toolbar>
     </q-header>
@@ -74,10 +74,16 @@ export default {
       leftDrawerOpen: false,
       navs: [
         {
+          name: 'news',
+          label: 'News & Updates',
+          icon: 'system_update',
+          to: '/'
+        },
+        {
           name: 'counter',
           label: 'Counter',
           icon: 'compare_arrows',
-          to: '/'
+          to: '/counter'
         },
         {
           name: 'settings',
