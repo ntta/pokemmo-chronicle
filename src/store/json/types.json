@@ -1,0 +1,1245 @@
+{
+    "types": {
+        "typeId1": {
+            "name": "bug",
+            "weaknesses": [
+                {
+                    "name": "normal",
+                    "factor": 1
+                },
+                {
+                    "name": "fire",
+                    "factor": 2
+                },
+                {
+                    "name": "water",
+                    "factor": 1
+                },
+                {
+                    "name": "electric",
+                    "factor": 1
+                },
+                {
+                    "name": "grass",
+                    "factor": 0.5
+                },
+                {
+                    "name": "ice",
+                    "factor": 1
+                },
+                {
+                    "name": "fighting",
+                    "factor": 0.5
+                },
+                {
+                    "name": "poison",
+                    "factor": 1
+                },
+                {
+                    "name": "ground",
+                    "factor": 0.5
+                },
+                {
+                    "name": "flying",
+                    "factor": 2
+                },
+                {
+                    "name": "psychic",
+                    "factor": 1
+                },
+                {
+                    "name": "bug",
+                    "factor": 1
+                },
+                {
+                    "name": "rock",
+                    "factor": 2
+                },
+                {
+                    "name": "ghost",
+                    "factor": 1
+                },
+                {
+                    "name": "dragon",
+                    "factor": 1
+                },
+                {
+                    "name": "dark",
+                    "factor": 1
+                },
+                {
+                    "name": "steel",
+                    "factor": 1
+                }
+            ]
+        },
+        "typeId2": {
+            "name": "dark",
+            "weaknesses": [
+                {
+                    "name": "normal",
+                    "factor": 1
+                },
+                {
+                    "name": "fire",
+                    "factor": 1
+                },
+                {
+                    "name": "water",
+                    "factor": 1
+                },
+                {
+                    "name": "electric",
+                    "factor": 1
+                },
+                {
+                    "name": "grass",
+                    "factor": 1
+                },
+                {
+                    "name": "ice",
+                    "factor": 1
+                },
+                {
+                    "name": "fighting",
+                    "factor": 2
+                },
+                {
+                    "name": "poison",
+                    "factor": 1
+                },
+                {
+                    "name": "ground",
+                    "factor": 1
+                },
+                {
+                    "name": "flying",
+                    "factor": 1
+                },
+                {
+                    "name": "psychic",
+                    "factor": 0
+                },
+                {
+                    "name": "bug",
+                    "factor": 2
+                },
+                {
+                    "name": "rock",
+                    "factor": 1
+                },
+                {
+                    "name": "ghost",
+                    "factor": 0.5
+                },
+                {
+                    "name": "dragon",
+                    "factor": 1
+                },
+                {
+                    "name": "dark",
+                    "factor": 0.5
+                },
+                {
+                    "name": "steel",
+                    "factor": 1
+                }
+            ]
+        },
+        "typeId3": {
+            "name": "dragon",
+            "weaknesses": [
+                {
+                    "name": "normal",
+                    "factor": 1
+                },
+                {
+                    "name": "fire",
+                    "factor": 0.5
+                },
+                {
+                    "name": "water",
+                    "factor": 0.5
+                },
+                {
+                    "name": "electric",
+                    "factor": 0.5
+                },
+                {
+                    "name": "grass",
+                    "factor": 0.5
+                },
+                {
+                    "name": "ice",
+                    "factor": 2
+                },
+                {
+                    "name": "fighting",
+                    "factor": 1
+                },
+                {
+                    "name": "poison",
+                    "factor": 1
+                },
+                {
+                    "name": "ground",
+                    "factor": 1
+                },
+                {
+                    "name": "flying",
+                    "factor": 1
+                },
+                {
+                    "name": "psychic",
+                    "factor": 1
+                },
+                {
+                    "name": "bug",
+                    "factor": 1
+                },
+                {
+                    "name": "rock",
+                    "factor": 1
+                },
+                {
+                    "name": "ghost",
+                    "factor": 1
+                },
+                {
+                    "name": "dragon",
+                    "factor": 2
+                },
+                {
+                    "name": "dark",
+                    "factor": 1
+                },
+                {
+                    "name": "steel",
+                    "factor": 1
+                }
+            ]
+        },
+        "typeId4": {
+            "name": "electric",
+            "weaknesses": [
+                {
+                    "name": "normal",
+                    "factor": 1
+                },
+                {
+                    "name": "fire",
+                    "factor": 1
+                },
+                {
+                    "name": "water",
+                    "factor": 1
+                },
+                {
+                    "name": "electric",
+                    "factor": 0.5
+                },
+                {
+                    "name": "grass",
+                    "factor": 1
+                },
+                {
+                    "name": "ice",
+                    "factor": 1
+                },
+                {
+                    "name": "fighting",
+                    "factor": 1
+                },
+                {
+                    "name": "poison",
+                    "factor": 1
+                },
+                {
+                    "name": "ground",
+                    "factor": 2
+                },
+                {
+                    "name": "flying",
+                    "factor": 0.5
+                },
+                {
+                    "name": "psychic",
+                    "factor": 1
+                },
+                {
+                    "name": "bug",
+                    "factor": 1
+                },
+                {
+                    "name": "rock",
+                    "factor": 1
+                },
+                {
+                    "name": "ghost",
+                    "factor": 1
+                },
+                {
+                    "name": "dragon",
+                    "factor": 1
+                },
+                {
+                    "name": "dark",
+                    "factor": 1
+                },
+                {
+                    "name": "steel",
+                    "factor": 0.5
+                }
+            ]
+        },
+        "typeId5": {
+            "name": "fighting",
+            "weaknesses": [
+                {
+                    "name": "normal",
+                    "factor": 1
+                },
+                {
+                    "name": "fire",
+                    "factor": 1
+                },
+                {
+                    "name": "water",
+                    "factor": 1
+                },
+                {
+                    "name": "electric",
+                    "factor": 1
+                },
+                {
+                    "name": "grass",
+                    "factor": 1
+                },
+                {
+                    "name": "ice",
+                    "factor": 1
+                },
+                {
+                    "name": "fighting",
+                    "factor": 1
+                },
+                {
+                    "name": "poison",
+                    "factor": 1
+                },
+                {
+                    "name": "ground",
+                    "factor": 1
+                },
+                {
+                    "name": "flying",
+                    "factor": 2
+                },
+                {
+                    "name": "psychic",
+                    "factor": 2
+                },
+                {
+                    "name": "bug",
+                    "factor": 0.5
+                },
+                {
+                    "name": "rock",
+                    "factor": 0.5
+                },
+                {
+                    "name": "ghost",
+                    "factor": 1
+                },
+                {
+                    "name": "dragon",
+                    "factor": 1
+                },
+                {
+                    "name": "dark",
+                    "factor": 0.5
+                },
+                {
+                    "name": "steel",
+                    "factor": 1
+                }
+            ]
+        },
+        "typeId6": {
+            "name": "fire",
+            "weaknesses": [
+                {
+                    "name": "normal",
+                    "factor": 1
+                },
+                {
+                    "name": "fire",
+                    "factor": 0.5
+                },
+                {
+                    "name": "water",
+                    "factor": 2
+                },
+                {
+                    "name": "electric",
+                    "factor": 1
+                },
+                {
+                    "name": "grass",
+                    "factor": 0.5
+                },
+                {
+                    "name": "ice",
+                    "factor": 0.5
+                },
+                {
+                    "name": "fighting",
+                    "factor": 1
+                },
+                {
+                    "name": "poison",
+                    "factor": 1
+                },
+                {
+                    "name": "ground",
+                    "factor": 2
+                },
+                {
+                    "name": "flying",
+                    "factor": 1
+                },
+                {
+                    "name": "psychic",
+                    "factor": 1
+                },
+                {
+                    "name": "bug",
+                    "factor": 0.5
+                },
+                {
+                    "name": "rock",
+                    "factor": 2
+                },
+                {
+                    "name": "ghost",
+                    "factor": 1
+                },
+                {
+                    "name": "dragon",
+                    "factor": 1
+                },
+                {
+                    "name": "dark",
+                    "factor": 1
+                },
+                {
+                    "name": "steel",
+                    "factor": 0.5
+                }
+            ]
+        },
+        "typeId7": {
+            "name": "flying",
+            "weaknesses": [
+                {
+                    "name": "normal",
+                    "factor": 1
+                },
+                {
+                    "name": "fire",
+                    "factor": 1
+                },
+                {
+                    "name": "water",
+                    "factor": 1
+                },
+                {
+                    "name": "electric",
+                    "factor": 2
+                },
+                {
+                    "name": "grass",
+                    "factor": 0.5
+                },
+                {
+                    "name": "ice",
+                    "factor": 2
+                },
+                {
+                    "name": "fighting",
+                    "factor": 0.5
+                },
+                {
+                    "name": "poison",
+                    "factor": 1
+                },
+                {
+                    "name": "ground",
+                    "factor": 0
+                },
+                {
+                    "name": "flying",
+                    "factor": 1
+                },
+                {
+                    "name": "psychic",
+                    "factor": 1
+                },
+                {
+                    "name": "bug",
+                    "factor": 0.5
+                },
+                {
+                    "name": "rock",
+                    "factor": 2
+                },
+                {
+                    "name": "ghost",
+                    "factor": 1
+                },
+                {
+                    "name": "dragon",
+                    "factor": 1
+                },
+                {
+                    "name": "dark",
+                    "factor": 1
+                },
+                {
+                    "name": "steel",
+                    "factor": 1
+                }
+            ]
+        },
+        "typeId8": {
+            "name": "ghost",
+            "weaknesses": [
+                {
+                    "name": "normal",
+                    "factor": 0
+                },
+                {
+                    "name": "fire",
+                    "factor": 1
+                },
+                {
+                    "name": "water",
+                    "factor": 1
+                },
+                {
+                    "name": "electric",
+                    "factor": 1
+                },
+                {
+                    "name": "grass",
+                    "factor": 1
+                },
+                {
+                    "name": "ice",
+                    "factor": 1
+                },
+                {
+                    "name": "fighting",
+                    "factor": 0
+                },
+                {
+                    "name": "poison",
+                    "factor": 0.5
+                },
+                {
+                    "name": "ground",
+                    "factor": 1
+                },
+                {
+                    "name": "flying",
+                    "factor": 1
+                },
+                {
+                    "name": "psychic",
+                    "factor": 1
+                },
+                {
+                    "name": "bug",
+                    "factor": 0.5
+                },
+                {
+                    "name": "rock",
+                    "factor": 1
+                },
+                {
+                    "name": "ghost",
+                    "factor": 2
+                },
+                {
+                    "name": "dragon",
+                    "factor": 1
+                },
+                {
+                    "name": "dark",
+                    "factor": 2
+                },
+                {
+                    "name": "steel",
+                    "factor": 1
+                }
+            ]
+        },
+        "typeId9": {
+            "name": "grass",
+            "weaknesses": [
+                {
+                    "name": "normal",
+                    "factor": 1
+                },
+                {
+                    "name": "fire",
+                    "factor": 2
+                },
+                {
+                    "name": "water",
+                    "factor": 0.5
+                },
+                {
+                    "name": "electric",
+                    "factor": 0.5
+                },
+                {
+                    "name": "grass",
+                    "factor": 0.5
+                },
+                {
+                    "name": "ice",
+                    "factor": 2
+                },
+                {
+                    "name": "fighting",
+                    "factor": 1
+                },
+                {
+                    "name": "poison",
+                    "factor": 2
+                },
+                {
+                    "name": "ground",
+                    "factor": 0.5
+                },
+                {
+                    "name": "flying",
+                    "factor": 2
+                },
+                {
+                    "name": "psychic",
+                    "factor": 1
+                },
+                {
+                    "name": "bug",
+                    "factor": 2
+                },
+                {
+                    "name": "rock",
+                    "factor": 1
+                },
+                {
+                    "name": "ghost",
+                    "factor": 1
+                },
+                {
+                    "name": "dragon",
+                    "factor": 1
+                },
+                {
+                    "name": "dark",
+                    "factor": 1
+                },
+                {
+                    "name": "steel",
+                    "factor": 1
+                }
+            ]
+        },
+        "typeId10": {
+            "name": "ground",
+            "weaknesses": [
+                {
+                    "name": "normal",
+                    "factor": 1
+                },
+                {
+                    "name": "fire",
+                    "factor": 1
+                },
+                {
+                    "name": "water",
+                    "factor": 2
+                },
+                {
+                    "name": "electric",
+                    "factor": 0
+                },
+                {
+                    "name": "grass",
+                    "factor": 2
+                },
+                {
+                    "name": "ice",
+                    "factor": 2
+                },
+                {
+                    "name": "fighting",
+                    "factor": 1
+                },
+                {
+                    "name": "poison",
+                    "factor": 0.5
+                },
+                {
+                    "name": "ground",
+                    "factor": 1
+                },
+                {
+                    "name": "flying",
+                    "factor": 1
+                },
+                {
+                    "name": "psychic",
+                    "factor": 1
+                },
+                {
+                    "name": "bug",
+                    "factor": 1
+                },
+                {
+                    "name": "rock",
+                    "factor": 0.5
+                },
+                {
+                    "name": "ghost",
+                    "factor": 1
+                },
+                {
+                    "name": "dragon",
+                    "factor": 1
+                },
+                {
+                    "name": "dark",
+                    "factor": 1
+                },
+                {
+                    "name": "steel",
+                    "factor": 1
+                }
+            ]
+        },
+        "typeId11": {
+            "name": "ice",
+            "weaknesses": [
+                {
+                    "name": "normal",
+                    "factor": 1
+                },
+                {
+                    "name": "fire",
+                    "factor": 2
+                },
+                {
+                    "name": "water",
+                    "factor": 1
+                },
+                {
+                    "name": "electric",
+                    "factor": 1
+                },
+                {
+                    "name": "grass",
+                    "factor": 1
+                },
+                {
+                    "name": "ice",
+                    "factor": 0.5
+                },
+                {
+                    "name": "fighting",
+                    "factor": 2
+                },
+                {
+                    "name": "poison",
+                    "factor": 1
+                },
+                {
+                    "name": "ground",
+                    "factor": 1
+                },
+                {
+                    "name": "flying",
+                    "factor": 1
+                },
+                {
+                    "name": "psychic",
+                    "factor": 1
+                },
+                {
+                    "name": "bug",
+                    "factor": 1
+                },
+                {
+                    "name": "rock",
+                    "factor": 2
+                },
+                {
+                    "name": "ghost",
+                    "factor": 1
+                },
+                {
+                    "name": "dragon",
+                    "factor": 1
+                },
+                {
+                    "name": "dark",
+                    "factor": 1
+                },
+                {
+                    "name": "steel",
+                    "factor": 2
+                }
+            ]
+        },
+        "typeId12": {
+            "name": "normal",
+            "weaknesses": [
+                {
+                    "name": "normal",
+                    "factor": 1
+                },
+                {
+                    "name": "fire",
+                    "factor": 1
+                },
+                {
+                    "name": "water",
+                    "factor": 1
+                },
+                {
+                    "name": "electric",
+                    "factor": 1
+                },
+                {
+                    "name": "grass",
+                    "factor": 1
+                },
+                {
+                    "name": "ice",
+                    "factor": 1
+                },
+                {
+                    "name": "fighting",
+                    "factor": 2
+                },
+                {
+                    "name": "poison",
+                    "factor": 1
+                },
+                {
+                    "name": "ground",
+                    "factor": 1
+                },
+                {
+                    "name": "flying",
+                    "factor": 1
+                },
+                {
+                    "name": "psychic",
+                    "factor": 1
+                },
+                {
+                    "name": "bug",
+                    "factor": 1
+                },
+                {
+                    "name": "rock",
+                    "factor": 1
+                },
+                {
+                    "name": "ghost",
+                    "factor": 0
+                },
+                {
+                    "name": "dragon",
+                    "factor": 1
+                },
+                {
+                    "name": "dark",
+                    "factor": 1
+                },
+                {
+                    "name": "steel",
+                    "factor": 1
+                }
+            ]
+        },
+        "typeId13": {
+            "name": "poison",
+            "weaknesses": [
+                {
+                    "name": "normal",
+                    "factor": 1
+                },
+                {
+                    "name": "fire",
+                    "factor": 1
+                },
+                {
+                    "name": "water",
+                    "factor": 1
+                },
+                {
+                    "name": "electric",
+                    "factor": 1
+                },
+                {
+                    "name": "grass",
+                    "factor": 0.5
+                },
+                {
+                    "name": "ice",
+                    "factor": 1
+                },
+                {
+                    "name": "fighting",
+                    "factor": 0.5
+                },
+                {
+                    "name": "poison",
+                    "factor": 0.5
+                },
+                {
+                    "name": "ground",
+                    "factor": 2
+                },
+                {
+                    "name": "flying",
+                    "factor": 1
+                },
+                {
+                    "name": "psychic",
+                    "factor": 2
+                },
+                {
+                    "name": "bug",
+                    "factor": 0.5
+                },
+                {
+                    "name": "rock",
+                    "factor": 1
+                },
+                {
+                    "name": "ghost",
+                    "factor": 1
+                },
+                {
+                    "name": "dragon",
+                    "factor": 1
+                },
+                {
+                    "name": "dark",
+                    "factor": 1
+                },
+                {
+                    "name": "steel",
+                    "factor": 1
+                }
+            ]
+        },
+        "typeId14": {
+            "name": "psychic",
+            "weaknesses": [
+                {
+                    "name": "normal",
+                    "factor": 1
+                },
+                {
+                    "name": "fire",
+                    "factor": 1
+                },
+                {
+                    "name": "water",
+                    "factor": 1
+                },
+                {
+                    "name": "electric",
+                    "factor": 1
+                },
+                {
+                    "name": "grass",
+                    "factor": 1
+                },
+                {
+                    "name": "ice",
+                    "factor": 1
+                },
+                {
+                    "name": "fighting",
+                    "factor": 0.5
+                },
+                {
+                    "name": "poison",
+                    "factor": 1
+                },
+                {
+                    "name": "ground",
+                    "factor": 1
+                },
+                {
+                    "name": "flying",
+                    "factor": 1
+                },
+                {
+                    "name": "psychic",
+                    "factor": 0.5
+                },
+                {
+                    "name": "bug",
+                    "factor": 2
+                },
+                {
+                    "name": "rock",
+                    "factor": 1
+                },
+                {
+                    "name": "ghost",
+                    "factor": 2
+                },
+                {
+                    "name": "dragon",
+                    "factor": 1
+                },
+                {
+                    "name": "dark",
+                    "factor": 2
+                },
+                {
+                    "name": "steel",
+                    "factor": 1
+                }
+            ]
+        },
+        "typeId15": {
+            "name": "rock",
+            "weaknesses": [
+                {
+                    "name": "normal",
+                    "factor": 0.5
+                },
+                {
+                    "name": "fire",
+                    "factor": 0.5
+                },
+                {
+                    "name": "water",
+                    "factor": 2
+                },
+                {
+                    "name": "electric",
+                    "factor": 1
+                },
+                {
+                    "name": "grass",
+                    "factor": 2
+                },
+                {
+                    "name": "ice",
+                    "factor": 1
+                },
+                {
+                    "name": "fighting",
+                    "factor": 2
+                },
+                {
+                    "name": "poison",
+                    "factor": 0.5
+                },
+                {
+                    "name": "ground",
+                    "factor": 2
+                },
+                {
+                    "name": "flying",
+                    "factor": 0.5
+                },
+                {
+                    "name": "psychic",
+                    "factor": 1
+                },
+                {
+                    "name": "bug",
+                    "factor": 1
+                },
+                {
+                    "name": "rock",
+                    "factor": 1
+                },
+                {
+                    "name": "ghost",
+                    "factor": 1
+                },
+                {
+                    "name": "dragon",
+                    "factor": 1
+                },
+                {
+                    "name": "dark",
+                    "factor": 1
+                },
+                {
+                    "name": "steel",
+                    "factor": 2
+                }
+            ]
+        },
+        "typeId16": {
+            "name": "steel",
+            "weaknesses": [
+                {
+                    "name": "normal",
+                    "factor": 0.5
+                },
+                {
+                    "name": "fire",
+                    "factor": 2
+                },
+                {
+                    "name": "water",
+                    "factor": 1
+                },
+                {
+                    "name": "electric",
+                    "factor": 1
+                },
+                {
+                    "name": "grass",
+                    "factor": 0.5
+                },
+                {
+                    "name": "ice",
+                    "factor": 0.5
+                },
+                {
+                    "name": "fighting",
+                    "factor": 2
+                },
+                {
+                    "name": "poison",
+                    "factor": 0
+                },
+                {
+                    "name": "ground",
+                    "factor": 2
+                },
+                {
+                    "name": "flying",
+                    "factor": 0.5
+                },
+                {
+                    "name": "psychic",
+                    "factor": 0.5
+                },
+                {
+                    "name": "bug",
+                    "factor": 0.5
+                },
+                {
+                    "name": "rock",
+                    "factor": 0.5
+                },
+                {
+                    "name": "ghost",
+                    "factor": 0.5
+                },
+                {
+                    "name": "dragon",
+                    "factor": 0.5
+                },
+                {
+                    "name": "dark",
+                    "factor": 0.5
+                },
+                {
+                    "name": "steel",
+                    "factor": 0.5
+                }
+            ]
+        },
+        "typeId17": {
+            "name": "water",
+            "weaknesses": [
+                {
+                    "name": "normal",
+                    "factor": 1
+                },
+                {
+                    "name": "fire",
+                    "factor": 0.5
+                },
+                {
+                    "name": "water",
+                    "factor": 0.5
+                },
+                {
+                    "name": "electric",
+                    "factor": 2
+                },
+                {
+                    "name": "grass",
+                    "factor": 2
+                },
+                {
+                    "name": "ice",
+                    "factor": 0.5
+                },
+                {
+                    "name": "fighting",
+                    "factor": 1
+                },
+                {
+                    "name": "poison",
+                    "factor": 1
+                },
+                {
+                    "name": "ground",
+                    "factor": 1
+                },
+                {
+                    "name": "flying",
+                    "factor": 1
+                },
+                {
+                    "name": "psychic",
+                    "factor": 1
+                },
+                {
+                    "name": "bug",
+                    "factor": 1
+                },
+                {
+                    "name": "rock",
+                    "factor": 1
+                },
+                {
+                    "name": "ghost",
+                    "factor": 1
+                },
+                {
+                    "name": "dragon",
+                    "factor": 1
+                },
+                {
+                    "name": "dark",
+                    "factor": 1
+                },
+                {
+                    "name": "steel",
+                    "factor": 0.5
+                }
+            ]
+        }
+    }
+}

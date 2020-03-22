@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
-import pokemonTypes from './store-pokemon-types'
+import pokemonTypes from './store-types'
 
 Vue.use(Vuex)
 
