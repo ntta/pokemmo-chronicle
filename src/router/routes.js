@@ -5,6 +5,7 @@ const routes = [
     component: () => import('layouts/Layout.vue'),
     children: [
       { path: '/', component: () => import('pages/PageNews.vue') },
+      { path: '/abilities', component: () => import('pages/PageAbilities.vue') },
       { path: '/counter', component: () => import('pages/PageCounterType.vue') },
       { path: '/settings', component: () => import('pages/PageSettings.vue') },
       { path: '/about', component: () => import('pages/PageAbout.vue') }

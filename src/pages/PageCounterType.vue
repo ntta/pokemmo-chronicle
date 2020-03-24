@@ -2,7 +2,7 @@
   <q-page padding>
     <div class="row">
       <div class="q-pa-sm"
-          v-for="(pokemonType, key) in pokemonTypes"
+          v-for="(pokemonType, key) in types"
           :key="key">
           <p class="pkm-type-name">{{ upperFirstLetter(pokemonType.name) }}</p>
           <q-btn round
@@ -53,7 +53,7 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 export default {
   data () {
     return {
@@ -80,18 +80,19 @@ export default {
     }
   },
   computed: {
-    ...mapGetters('pokemonTypes', ['pokemonTypes'])
+    ...mapGetters('types', ['types'])
   },
   methods: {
+    ...mapActions('types', ['fbReadData']),
     addToSelectedTypes (type) {
       if (this.selectedTypes.length === 2) {
         return
       }
       this.selectedTypes.push(type)
-      for (var i in type.weakness) {
+      for (var i in type.weaknesses) {
         for (var j in this.totalWeakness) {
-          if (this.totalWeakness[j].type === type.weakness[i].name) {
-            this.totalWeakness[j].factor *= type.weakness[i].factor
+          if (this.totalWeakness[j].type === type.weaknesses[i].name) {
+            this.totalWeakness[j].factor *= type.weaknesses[i].factor
           }
         }
       }
@@ -103,10 +104,10 @@ export default {
       }
       if (this.selectedTypes.length !== 0) {
         for (var j in this.selectedTypes) {
-          for (var k in this.selectedTypes[j].weakness) {
+          for (var k in this.selectedTypes[j].weaknesses) {
             for (var l in this.totalWeakness) {
-              if (this.totalWeakness[l].type === this.selectedTypes[j].weakness[k].name) {
-                this.totalWeakness[l].factor *= this.selectedTypes[j].weakness[k].factor
+              if (this.totalWeakness[l].type === this.selectedTypes[j].weaknesses[k].name) {
+                this.totalWeakness[l].factor *= this.selectedTypes[j].weaknesses[k].factor
               }
             }
           }
@@ -125,6 +126,9 @@ export default {
         return 'pkm-weakness-normal'
       }
     }
+  },
+  mounted () {
+    this.fbReadData()
   }
 }
 

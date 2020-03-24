@@ -80,6 +80,12 @@ export default {
           to: '/'
         },
         {
+          name: 'abilities',
+          label: 'Abilities',
+          icon: 'font_download',
+          to: '/abilities'
+        },
+        {
           name: 'counter',
           label: 'Counter',
           icon: 'compare_arrows',
