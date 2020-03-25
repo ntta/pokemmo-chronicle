@@ -110,13 +110,18 @@
             "name": "Bide",
             "description": "The user endures attacks for two turns, then strikes back to cause double the damage taken.",
             "category": "physical",
-            "priority": 0,
+            "priority": 1,
             "typeId": "normal",
-            "power": "",
+            "power": 1,
             "pp": 10,
             "acccuracy": "",
-            "targets": "",
-            "notes": [],
+            "targets": "Self",
+            "notes": [
+                "Makes contact with the foe.",
+                "Can be prevented with Protect/Detect.",
+                "Can hit Pokémon in the semi-invulnerable turn of Dig, Fly, Bounce, and Dive.",
+                "This Normal-type move can affect Ghost-type Pokémon."
+            ],
             "moveLocationIds": []
         },
         "moveId10": {
@@ -1549,13 +1554,19 @@
             "name": "Roar",
             "description": "The target is scared off and switched. In the wild, a battle against a single Pokémon ends.",
             "category": "status",
-            "priority": 0,
+            "priority": -6,
             "typeId": "normal",
             "power": "",
             "pp": 20,
             "acccuracy": "",
-            "targets": "",
-            "notes": [],
+            "targets": "Selected Adjacent Pokémon",
+            "notes": [
+                "Can be prevented with Protect/Detect.",
+                "Can be reflected by Magic Coat.",
+                "Can be copied by Mirror Move.",
+                "Soud based; Prevented by Soundproof.",
+                "By passes Substitute."
+            ],
             "moveLocationIds": []
         },
         "moveId108": {
@@ -2631,13 +2642,15 @@
             "name": "Detect",
             "description": "It enables the user to evade all attacks. Its chance of failing rises if it is used in succession.",
             "category": "status",
-            "priority": 0,
+            "priority": 4,
             "typeId": "fighting",
             "power": "",
             "pp": 5,
             "acccuracy": "",
-            "targets": "",
-            "notes": [],
+            "targets": "Self",
+            "notes": [
+                "Its success rate is halved when used consecutively."
+            ],
             "moveLocationIds": []
         },
         "moveId181": {
@@ -2703,13 +2716,17 @@
             "name": "Extreme Speed",
             "description": "The user charges the target at blinding speed. This attack always goes before any other move.",
             "category": "physical",
-            "priority": 0,
+            "priority": 2,
             "typeId": "normal",
             "power": 80,
             "pp": 5,
             "acccuracy": 100,
-            "targets": "",
-            "notes": [],
+            "targets": "Selected Adjacent Pokémon",
+            "notes": [
+                "Makes contact with the foe.",
+                "Can be prevented with Protect/Detect.",
+                "Can be copied by Mirror Move."
+            ],
             "moveLocationIds": []
         },
         "moveId186": {
@@ -2933,13 +2950,17 @@
             "name": "Mach Punch",
             "description": "The user throws a punch at blinding speed. It is certain to strike first.",
             "category": "physical",
-            "priority": 0,
+            "priority": 1,
             "typeId": "fighting",
             "power": 40,
             "pp": 30,
             "acccuracy": 100,
-            "targets": "",
-            "notes": [],
+            "targets": "Selected Adjacent Pokémon",
+            "notes": [
+                "Makes contact with the foe.",
+                "Can be prevented with Protect/Detect.",
+                "Can be copied by Mirror Move."
+            ],
             "moveLocationIds": []
         },
         "moveId201": {
@@ -3653,13 +3674,17 @@
             "name": "Vital Throw",
             "description": "The user attacks last. In return, this throw move is guaranteed not to miss.",
             "category": "physical",
-            "priority": 0,
+            "priority": -1,
             "typeId": "fighting",
             "power": 70,
             "pp": 10,
             "acccuracy": "",
-            "targets": "",
-            "notes": [],
+            "targets": "Selected Adjacent Pokémon",
+            "notes": [
+                "Makes contact with the foe.",
+                "Can be prevented with Protect/Detect.",
+                "Can be copied by Mirror Move."
+            ],
             "moveLocationIds": []
         },
         "moveId250": {
@@ -4248,12 +4273,12 @@
             "name": "Helping Hand",
             "description": "The user assists an ally by boosting the power of its attack.",
             "category": "status",
-            "priority": 0,
+            "priority": 5,
             "typeId": "normal",
             "power": "",
             "pp": 20,
             "acccuracy": "",
-            "targets": "",
+            "targets": "Adjacent Ally",
             "notes": [],
             "moveLocationIds": []
         },
@@ -4417,12 +4442,12 @@
             "name": "Magic Coat",
             "description": "A barrier reflects back to the target moves like Leech Seed and moves that damage status.",
             "category": "status",
-            "priority": 0,
+            "priority": 4,
             "typeId": "psychic",
             "power": "",
             "pp": 15,
             "acccuracy": "",
-            "targets": "",
+            "targets": "Self",
             "notes": [],
             "moveLocationIds": []
         },
@@ -4662,13 +4687,17 @@
             "name": "Revenge",
             "description": "An attack move that inflicts double the damage if the user has been hurt by the opponent in the same turn.",
             "category": "physical",
-            "priority": 0,
+            "priority": -4,
             "typeId": "fighting",
             "power": 60,
             "pp": 10,
             "acccuracy": 100,
-            "targets": "",
-            "notes": [],
+            "targets": "Selected Adjacent Pokémon",
+            "notes": [
+                "Makes contact with the foe.",
+                "Can be prevented with Protect/Detect.",
+                "Can be copied by Mirror Move."
+            ],
             "moveLocationIds": []
         },
         "moveId321": {
@@ -4873,12 +4902,12 @@
             "name": "Snatch",
             "description": "The user steals the effects of any healing or stat-changing move the opponent attempts to use.",
             "category": "status",
-            "priority": 0,
+            "priority": 4,
             "typeId": "dark",
             "power": "",
             "pp": 10,
             "acccuracy": "",
-            "targets": "",
+            "targets": "Self",
             "notes": [],
             "moveLocationIds": []
         },
@@ -5274,13 +5303,17 @@
             "name": "Avalanche",
             "description": "An attack move that inflicts double the damage if the user has been hurt by the target in the same turn.",
             "category": "physical",
-            "priority": 0,
+            "priority": -4,
             "typeId": "ice",
             "power": 60,
             "pp": 10,
             "acccuracy": 100,
-            "targets": "",
-            "notes": [],
+            "targets": "Selected Adjacent Pokémon",
+            "notes": [
+                "Makes contact with the foe.",
+                "Can be prevented with Protect/Detect.",
+                "Can be copied by Mirror Move."
+            ],
             "moveLocationIds": []
         },
         "moveId364": {
@@ -5351,13 +5384,17 @@
             "name": "Bullet Punch",
             "description": "The user strikes the target with tough punches as fast as bullets. This move always goes first.",
             "category": "physical",
-            "priority": 0,
+            "priority": 1,
             "typeId": "steel",
             "power": 40,
             "pp": 30,
             "acccuracy": 100,
-            "targets": "",
-            "notes": [],
+            "targets": "Selected Adjacent Pokémon",
+            "notes": [
+                "Makes contact with the foe.",
+                "Can be prevented with Protect/Detect.",
+                "Can be copied by Mirror Move."
+            ],
             "moveLocationIds": []
         },
         "moveId369": {
@@ -5643,13 +5680,15 @@
             "name": "Feint",
             "description": "An attack that hits a target using Protect or Detect. It also lifts the effects of those moves.",
             "category": "physical",
-            "priority": 0,
+            "priority": 2,
             "typeId": "normal",
             "power": 30,
             "pp": 10,
             "acccuracy": 100,
-            "targets": "",
-            "notes": [],
+            "targets": "Selected Adjacent Pokémon",
+            "notes": [
+                "Can be copied by Mirror Move."
+            ],
             "moveLocationIds": []
         },
         "moveId390": {
@@ -5943,13 +5982,16 @@
             "name": "Ice Shard",
             "description": "The user flash freezes chunks of ice and hurls them at the target. This move always goes first.",
             "category": "physical",
-            "priority": 0,
+            "priority": 1,
             "typeId": "ice",
             "power": 40,
             "pp": 30,
             "acccuracy": 100,
-            "targets": "",
-            "notes": [],
+            "targets": "Selected Adjacent Pokémon",
+            "notes": [
+                "Can be prevented with Protect/Detect.",
+                "Can be copied by Mirror Move."
+            ],
             "moveLocationIds": []
         },
         "moveId411": {
@@ -6469,13 +6511,17 @@
             "name": "Shadow Sneak",
             "description": "The user extends its shadow and attacks the target from behind. This move always goes first.",
             "category": "physical",
-            "priority": 0,
+            "priority": 1,
             "typeId": "ghost",
             "power": 40,
             "pp": 30,
             "acccuracy": 100,
-            "targets": "",
-            "notes": [],
+            "targets": "Selected Adjacent Pokémon",
+            "notes": [
+                "Makes contact with the foe.",
+                "Can be prevented with Protect/Detect.",
+                "Can be copied by Mirror Move."
+            ],
             "moveLocationIds": []
         },
         "moveId450": {
@@ -6521,13 +6567,17 @@
             "name": "Sucker Punch",
             "description": "This move enables the user to attack first. It fails if the target is not readying an attack, however.",
             "category": "physical",
-            "priority": 0,
+            "priority": 1,
             "typeId": "dark",
             "power": 70,
             "pp": 5,
             "acccuracy": 100,
-            "targets": "",
-            "notes": [],
+            "targets": "Selected Adjacent Pokémon",
+            "notes": [
+                "Makes contact with the foe.",
+                "Can be prevented with Protect/Detect.",
+                "Can be copied by Mirror Move."
+            ],
             "moveLocationIds": []
         },
         "moveId454": {
@@ -6588,13 +6638,15 @@
             "name": "Trick Room",
             "description": "The user creates a bizarre area in which slower Pokémon get to move first for five turns.",
             "category": "status",
-            "priority": 0,
+            "priority": -7,
             "typeId": "psychic",
             "power": "",
             "pp": 5,
             "acccuracy": "",
-            "targets": "",
-            "notes": [],
+            "targets": "Entire Field",
+            "notes": [
+                "Can be copied by Mirror Move."
+            ],
             "moveLocationIds": []
         },
         "moveId459": {
@@ -6631,13 +6683,16 @@
             "name": "Vacuum Wave",
             "description": "The user whirls its fists to send a wave of pure vacuum at the target. This move always goes first.",
             "category": "special",
-            "priority": 0,
+            "priority": 1,
             "typeId": "fighting",
             "power": 40,
             "pp": 30,
             "acccuracy": 100,
-            "targets": "",
-            "notes": [],
+            "targets": "Selected Adjacent Pokémon",
+            "notes": [
+                "Can be prevented with Protect/Detect.",
+                "Can be copied by Mirror Move."
+            ],
             "moveLocationIds": []
         },
         "moveId462": {
@@ -6774,12 +6829,12 @@
             "name": "Ally Switch",
             "description": "The user teleports using a strange power and switches its place with one of its allies.",
             "category": "status",
-            "priority": 0,
+            "priority": 2,
             "typeId": "psychic",
             "power": "",
             "pp": 15,
             "acccuracy": "",
-            "targets": "",
+            "targets": "Self",
             "notes": [],
             "moveLocationIds": []
         },
@@ -6865,13 +6920,17 @@
             "name": "Circle Throw",
             "description": "The target is thrown and switched. In the wild, a battle against a single Pokémon ends.",
             "category": "physical",
-            "priority": 0,
+            "priority": -6,
             "typeId": "fighting",
             "power": 60,
             "pp": 10,
             "acccuracy": 90,
-            "targets": "",
-            "notes": [],
+            "targets": "Selected Adjacent Pokémon",
+            "notes": [
+                "Makes contact with the foe.",
+                "Can be prevented with Protect/Detect.",
+                "Can be copied by Mirror Move."
+            ],
             "moveLocationIds": []
         },
         "moveId479": {
@@ -6917,13 +6976,17 @@
             "name": "Dragon Tail",
             "description": "The target is knocked away and switched. In the wild, a battle against a single Pokémon ends.",
             "category": "physical",
-            "priority": 0,
+            "priority": -6,
             "typeId": "dragon",
             "power": 60,
             "pp": 10,
             "acccuracy": 90,
-            "targets": "",
-            "notes": [],
+            "targets": "Selected Adjacent Pokémon",
+            "notes": [
+                "Makes contact with the foe.",
+                "Can be prevented with Protect/Detect.",
+                "Can be copied by Mirror Move."
+            ],
             "moveLocationIds": []
         },
         "moveId483": {
@@ -7420,8 +7483,10 @@
             "power": "",
             "pp": 10,
             "acccuracy": "",
-            "targets": "",
-            "notes": [],
+            "targets": "Entire Field",
+            "notes": [
+                "Can be copied by Mirror Move."
+            ],
             "moveLocationIds": []
         },
         "moveId519": {
@@ -7493,13 +7558,15 @@
             "name": "Quick Guard",
             "description": "The user protects itself and its allies from priority moves. If used in succession, its chance of failing rises.",
             "category": "status",
-            "priority": 0,
+            "priority": 3,
             "typeId": "fighting",
             "power": "",
             "pp": 15,
             "acccuracy": "",
-            "targets": "",
-            "notes": [],
+            "targets": "Ally Field",
+            "notes": [
+                "Can be stolen by Snatch."
+            ],
             "moveLocationIds": []
         },
         "moveId525": {
@@ -7930,13 +7997,15 @@
             "name": "Wide Guard",
             "description": "The user and its allies are protected from wide-ranging attacks for one turn. If used in succession, its chance of failing rises.",
             "category": "status",
-            "priority": 0,
+            "priority": 3,
             "typeId": "rock",
             "power": "",
             "pp": 10,
             "acccuracy": "",
-            "targets": "",
-            "notes": [],
+            "targets": "Ally Field",
+            "notes": [
+                "Can be stolen by Snatch."
+            ],
             "moveLocationIds": []
         },
         "moveId557": {
@@ -7961,8 +8030,10 @@
             "power": "",
             "pp": 10,
             "acccuracy": "",
-            "targets": "",
-            "notes": [],
+            "targets": "Entire Field",
+            "notes": [
+                "Can be copied by Mirror Move."
+            ],
             "moveLocationIds": []
         },
         "moveId559": {
