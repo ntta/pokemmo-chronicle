@@ -1,45 +1,34 @@
 <template>
-  <q-layout view="hHh lpR fFf">
-    <q-header elevated>
+  <q-layout view="hHh lpR fFf" class="bg-grey-9 text-white">
+    <q-header elevated class="bg-grey-6">
       <q-toolbar>
-        <!-- <q-btn
+        <q-btn
           flat
           dense
           round
           @click="leftDrawerOpen = !leftDrawerOpen"
           icon="menu"
           aria-label="Menu"
-        /> -->
+        />
 
-        <q-toolbar-title class="absolute-center">
-          PokeMMO Chronicle
+        <q-toolbar-title>
+          {{ currentPageLabel }}
         </q-toolbar-title>
       </q-toolbar>
     </q-header>
 
     <q-footer>
-      <q-tabs>
-        <q-route-tab
-          v-for="nav in navs"
-          :key="nav.name"
-          :to="nav.to"
-          :name="nav.name"
-          :icon="nav.icon"
-          :label="nav.label"
-        />
-      </q-tabs>
     </q-footer>
 
     <q-drawer
       v-model="leftDrawerOpen"
-      :breakpoint="767"
       :width="250"
       show-if-above
       bordered
-      content-class="bg-primary"
+      content-class="bg-grey-8"
     >
-      <q-list>
-        <!-- <q-item-label header>Menu</q-item-label> -->
+      <q-list dark>
+        <q-item-label header>PokeMMO Chronicle</q-item-label>
         <q-item
           v-for="nav in navs"
           :key="nav.name"
@@ -53,7 +42,6 @@
           </q-item-section>
           <q-item-section>
             <q-item-label>{{ nav.label }}</q-item-label>
-            <!-- <q-item-label caption>Choose the right type can counter</q-item-label> -->
           </q-item-section>
         </q-item>
       </q-list>
@@ -72,12 +60,19 @@ export default {
   data () {
     return {
       leftDrawerOpen: false,
+      currentPageLabel: '',
       navs: [
         {
           name: 'news',
           label: 'News & Updates',
           icon: 'system_update',
-          to: '/'
+          to: '/news'
+        },
+        {
+          name: 'pokemons',
+          label: 'Pokédex',
+          icon: 'chrome_reader_mode',
+          to: '/pokemons'
         },
         {
           name: 'abilities',
@@ -105,17 +100,24 @@ export default {
         }
       ]
     }
+  },
+  methods: {
+    getCurrentPageLabel () {
+      for (var i in this.navs) {
+        if (window.location.href.includes(this.navs[i].to)) {
+          this.currentPageLabel = this.navs[i].label
+          return
+        }
+      }
+    }
+  },
+  beforeUpdate () {
+    this.getCurrentPageLabel()
   }
 }
 </script>
 
 <style lang="scss">
-  @media screen and (min-width: 768px) {
-    .q-footer {
-      display: none;
-    }
-  }
-
   .q-drawer {
     .q-router-link--exact-active {
       color: white !important;
