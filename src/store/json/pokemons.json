@@ -11092,11 +11092,11 @@
             "moves": [
                 {
                     "level": "START",
-                    "moveId": "moveId196"
+                    "name": "Hidden Power"
                 },
                 {
                     "level": "TM",
-                    "moveId": "moveId196"
+                    "name": "Hidden Power"
                 }
             ],
             "locations": [
@@ -11108,6 +11108,8 @@
                     "rarity": "very rare"
                 }
             ],
+            "sprites": {},
+            "defaultForm": "A",            
             "forms": {
                 "?": {
                     "locations": [
@@ -19973,28 +19975,432 @@
         "pokemonId351": {
             "nationalNo": 351,
             "name": "Castform",
-            "types": [],
+            "types": ["normal"],
             "genderRatio": {
                 "male": 50.0,
                 "female": 50.0
             },
             "genderDifference": "",
             "species": "Weather Pokémon",
-            "description": "Temperature and weather affect its cellular structure, so this Pokémon changes form according to the weather.",
+            "description": "Its appearance changes with the weather. Recently, its molecules were found to be just like water.",
             "region": [],
             "height": "0.3",
             "weight": "0.8",
-            "abilities": {},
-            "pvpTier": "",
-            "evYields": [],
+            "abilities": {
+                "normal": [
+                    "Forecast"
+                ],
+                "hidden": []
+            },
+            "pvpTier": "Untiered",
+            "evYields": ["+1 HP"],
             "eggGroups": [
                 "Fairy",
                 "Chaos"
             ],
-            "baseStats": {},
-            "moves": [],
-            "locations": [],
-            "sprites": {}
+            "baseStats": {
+                "hp": 70,
+                "attack": 70,
+                "defense": 70,
+                "spAttack": 70,
+                "spDefense": 70,
+                "speed": 70
+            },
+            "moves": [
+                {
+                    "level": "START",
+                    "name": "Tackle"
+                },
+                {
+                    "level": "Lv. 10",
+                    "name": "Ember"
+                },
+                {
+                    "level": "Lv. 10",
+                    "name": "Powder Snow"
+                },
+                {
+                    "level": "Lv. 10",
+                    "name": "Water Gun"
+                },
+                {
+                    "level": "Lv. 15",
+                    "name": "Headbutt"
+                },
+                {
+                    "level": "Lv. 20",
+                    "name": "Hail"
+                },
+                {
+                    "level": "Lv. 20",
+                    "name": "Rain Dance"
+                },
+                {
+                    "level": "Lv. 20",
+                    "name": "Sunny Day"
+                },
+                {
+                    "level": "Lv. 25",
+                    "name": "Weather Ball"
+                },
+                {
+                    "level": "Lv. 35",
+                    "name": "Blizzard"
+                },
+                {
+                    "level": "Lv. 35",
+                    "name": "Fire Blast"
+                },
+                {
+                    "level": "Lv. 35",
+                    "name": "Hydro Pump"
+                },
+                {
+                    "level": "Lv. 45",
+                    "name": "Hurricane"
+                },
+                {
+                    "level": "TM",
+                    "name": "Attract"
+                },
+                {
+                    "level": "TM",
+                    "name": "Avalanche"
+                },
+                {
+                    "level": "TM",
+                    "name": "Blizzard"
+                },
+                {
+                    "level": "TM",
+                    "name": "Captivate"
+                },
+                {
+                    "level": "TM",
+                    "name": "Double Team"
+                },
+                {
+                    "level": "TM",
+                    "name": "Endure"
+                },
+                {
+                    "level": "TM",
+                    "name": "Energy Ball"
+                },
+                {
+                    "level": "TM",
+                    "name": "Facade"
+                },
+                {
+                    "level": "TM",
+                    "name": "Fire Blast"
+                },
+                {
+                    "level": "TM",
+                    "name": "Flamethrower"
+                },
+                {
+                    "level": "TM",
+                    "name": "Flash"
+                },
+                {
+                    "level": "TM",
+                    "name": "Frustration"
+                },
+                {
+                    "level": "TM",
+                    "name": "Hail"
+                },
+                {
+                    "level": "TM",
+                    "name": "Hidden Power"
+                },
+                {
+                    "level": "TM",
+                    "name": "Ice Beam"
+                },
+                {
+                    "level": "TM",
+                    "name": "Incinerate"
+                },
+                {
+                    "level": "TM",
+                    "name": "Natural Gift"
+                },
+                {
+                    "level": "TM",
+                    "name": "Protect"
+                },
+                {
+                    "level": "TM",
+                    "name": "Psych Up"
+                },
+                {
+                    "level": "TM",
+                    "name": "Rain Dance"
+                },
+                {
+                    "level": "TM",
+                    "name": "Rest"
+                },
+                {
+                    "level": "TM",
+                    "name": "Retaliate"
+                },
+                {
+                    "level": "TM",
+                    "name": "Return"
+                },
+                {
+                    "level": "TM",
+                    "name": "Round"
+                },
+                {
+                    "level": "TM",
+                    "name": "Sandstorm"
+                },
+                {
+                    "level": "TM",
+                    "name": "Scald"
+                },
+                {
+                    "level": "TM",
+                    "name": "Secret Power"
+                },
+                {
+                    "level": "TM",
+                    "name": "Shadow Ball"
+                },
+                {
+                    "level": "TM",
+                    "name": "Shock Wave"
+                },
+                {
+                    "level": "TM",
+                    "name": "Sleep Talk"
+                },
+                {
+                    "level": "TM",
+                    "name": "Solar Beam"
+                },
+                {
+                    "level": "TM",
+                    "name": "Substitute"
+                },
+                {
+                    "level": "TM",
+                    "name": "Sunny Day"
+                },
+                {
+                    "level": "TM",
+                    "name": "Swagger"
+                },
+                {
+                    "level": "TM",
+                    "name": "Thief"
+                },
+                {
+                    "level": "TM",
+                    "name": "Thunder"
+                },
+                {
+                    "level": "TM",
+                    "name": "Thunder Wave"
+                },
+                {
+                    "level": "TM",
+                    "name": "Thunderbolt"
+                },
+                {
+                    "level": "TM",
+                    "name": "Toxic"
+                },
+                {
+                    "level": "TM",
+                    "name": "Water Pulse"
+                },
+                {
+                    "level": "TM",
+                    "name": "Work Up"
+                },
+                {
+                    "level": "HM",
+                    "name": "Defog"
+                },
+                {
+                    "level": "HM",
+                    "name": "Flash"
+                },
+                {
+                    "level": "TUTOR",
+                    "name": "Body Slam"
+                },
+                {
+                    "level": "TUTOR",
+                    "name": "Defense Curl"
+                },
+                {
+                    "level": "TUTOR",
+                    "name": "Defog"
+                },
+                {
+                    "level": "TUTOR",
+                    "name": "Double-Edge"
+                },
+                {
+                    "level": "TUTOR",
+                    "name": "Endure"
+                },
+                {
+                    "level": "TUTOR",
+                    "name": "Ember"
+                },
+                {
+                    "level": "TUTOR",
+                    "name": "Headbutt"
+                },
+                {
+                    "level": "TUTOR",
+                    "name": "Icy Wind"
+                },
+                {
+                    "level": "TUTOR",
+                    "name": "Last Resort"
+                },
+                {
+                    "level": "TUTOR",
+                    "name": "Mimic"
+                },
+                {
+                    "level": "TUTOR",
+                    "name": "Psych Up"
+                },
+                {
+                    "level": "TUTOR",
+                    "name": "Shock Wave"
+                },
+                {
+                    "level": "TUTOR",
+                    "name": "Sleep Talk"
+                },
+                {
+                    "level": "TUTOR",
+                    "name": "Snore"
+                },
+                {
+                    "level": "TUTOR",
+                    "name": "Substitute"
+                },
+                {
+                    "level": "TUTOR",
+                    "name": "Swagger"
+                },
+                {
+                    "level": "TUTOR",
+                    "name": "Swift"
+                },
+                {
+                    "level": "TUTOR",
+                    "name": "Tailwind"
+                },
+                {
+                    "level": "TUTOR",
+                    "name": "Thunder Wave"
+                },
+                {
+                    "level": "TUTOR",
+                    "name": "Water Pulse"
+                },
+                {
+                    "level": "EGG",
+                    "name": "Amnesia"
+                },
+                {
+                    "level": "EGG",
+                    "name": "Clear Smog"
+                },
+                {
+                    "level": "EGG",
+                    "name": "Cosmic Power"
+                },
+                {
+                    "level": "EGG",
+                    "name": "Disable"
+                },
+                {
+                    "level": "EGG",
+                    "name": "Future Sight"
+                },
+                {
+                    "level": "EGG",
+                    "name": "Guard Swap"
+                },
+                {
+                    "level": "EGG",
+                    "name": "Hex"
+                },
+                {
+                    "level": "EGG",
+                    "name": "Lucky Chant"
+                },
+                {
+                    "level": "EGG",
+                    "name": "Ominous Wind"
+                },
+                {
+                    "level": "EGG",
+                    "name": "Reflect Type"
+                }
+            ],
+            "locations": [
+                {
+                    "type": "grass",
+                    "region": "Hoenn",
+                    "location": "Safari Zone",
+                    "levels": "28 - 30",
+                    "rarity": "uncommon"
+                }
+            ],
+            "sprites": {},
+            "defaultForm": "Normal",            
+            "forms": {
+                "Normal": {
+                    "sprites": {
+                        "normal": {
+                            "front": "351-normal-n-front",
+                            "back": "351-normal-n-back"
+                        },
+                        "shiny": {
+                            "front": "351-normal-s-front",
+                            "back": "351-normal-s-back"
+                        }
+                    }
+                },
+                "Sunny": {
+                    "sprites": {
+                        "normal": {
+                            "front": "351-sunny-n-front",
+                            "back": "351-sunny-n-back"
+                        }
+                    }
+                },
+                "Rainy": {
+                    "sprites": {
+                        "normal": {
+                            "front": "351-rainy-n-front",
+                            "back": "351-rainy-n-back"
+                        }
+                    }
+                },
+                "Snowy": {
+                    "sprites": {
+                        "normal": {
+                            "front": "351-snowy-n-front",
+                            "back": "351-snowy-n-back"
+                        }
+                    }
+                }
+            }
         },
         "pokemonId352": {
             "nationalNo": 352,

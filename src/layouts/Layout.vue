@@ -34,6 +34,7 @@
           :key="nav.name"
           :to="nav.to"
           class="text-grey-4"
+          @click="getCurrentPageLabel(nav.label)"
           clickable
           exact
         >
@@ -60,13 +61,13 @@ export default {
   data () {
     return {
       leftDrawerOpen: false,
-      currentPageLabel: '',
+      currentPageLabel: 'News & Updates',
       navs: [
         {
           name: 'news',
           label: 'News & Updates',
           icon: 'system_update',
-          to: '/news'
+          to: '/'
         },
         {
           name: 'pokemons',
@@ -102,17 +103,9 @@ export default {
     }
   },
   methods: {
-    getCurrentPageLabel () {
-      for (var i in this.navs) {
-        if (window.location.href.includes(this.navs[i].to)) {
-          this.currentPageLabel = this.navs[i].label
-          return
-        }
-      }
+    getCurrentPageLabel (label) {
+      this.currentPageLabel = label
     }
-  },
-  beforeUpdate () {
-    this.getCurrentPageLabel()
   }
 }
 </script>
