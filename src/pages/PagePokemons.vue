@@ -2,7 +2,7 @@
 <template>
   <q-page
     padding
-    class="grid-parent"
+    class="pkm-grid-parent"
   >
     <pokemon
       v-for="(pokemon, id) in pokemons"
@@ -24,7 +24,7 @@ export default {
     ...mapActions('pokemons', ['fbReadData'])
   },
   components: {
-    'pokemon': require('components/Pokemon.vue').default
+    'pokemon': require('components/Pokemon/Pokemon.vue').default
   },
   mounted () {
     this.fbReadData()
@@ -33,7 +33,7 @@ export default {
 </script>
 
 <style lang="scss">
-  .grid-parent {
+  .pkm-grid-parent {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     grid-gap: 1em;

@@ -1,25 +1,31 @@
 <template>
-    <q-item
-      class="column inline pkm-info"
+  <q-item
+    class="column inline pkm-info"
+  >
+    <q-btn
+      @click="dialog = true"
     >
-      <q-btn
-        @click="showPokemonDetail(pokemon)"
-      >
-        <img :src="getIconPath(pokemon.nationalNo)" />
-        <div class="pkm-name">
-          #{{ getNationalNoStr(pokemon.nationalNo)}}
-          <br />
-          {{ pokemon.name }}
-        </div>
-      </q-btn>
-      <q-btn rounded=""
-        v-for="type in pokemon.types"
-        :key="type"
-        :label="type"
-        :class="getTypeClassMobile(type)"
-      >
-      </q-btn>
-    </q-item>
+      <img :src="getIconPath(pokemon.nationalNo)" />
+      <div class="pkm-name">
+        #{{ getNationalNoStr(pokemon.nationalNo)}}
+        <br />
+        {{ pokemon.name }}
+      </div>
+    </q-btn>
+    <q-btn rounded=""
+      v-for="type in pokemon.types"
+      :key="type"
+      :label="type"
+      :class="getTypeClassMobile(type)"
+      @click="showPokemonHasType(type)"
+    >
+    </q-btn>
+    <pokemon-details
+      :pokemon="pokemon"
+      :dialog="dialog"
+    >
+    </pokemon-details>
+  </q-item>
 </template>
 
 <script>
@@ -27,14 +33,16 @@ export default {
   props: ['pokemon'],
   data () {
     return {
+      dialog: false,
+      maximizedToggle: true
     }
   },
   methods: {
-    getTypeIcon (type) {
-      return 'https://www.serebii.net/pokedex-dp/type/' + type + '.gif'
-    },
     showPokemonDetail (pokemon) {
-      console.log(pokemon)
+      console.log(pokemon.name)
+    },
+    showPokemonHasType (type) {
+      console.log(type)
     },
     getTypeClassMobile (type) {
       return 'pill background-color-' + type
@@ -54,6 +62,9 @@ export default {
       let iconPath = '/statics/icons/pokemons/' + this.getNationalNoStr(number) + '.png'
       return iconPath
     }
+  },
+  components: {
+    'pokemon-details': require('components/Pokemon/PokemonDetails.vue').default
   }
 }
 </script>

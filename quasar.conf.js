@@ -57,9 +57,12 @@ module.exports = function (ctx) {
         'QTh',
         'QTr',
         'QTd',
-        'QImg'
+        'QImg',
+        'QDialog'
       ],
-      directives: [],
+      directives: [
+        'ClosePopup'
+      ],
 
       // Quasar plugins
       plugins: []
@@ -114,8 +117,8 @@ module.exports = function (ctx) {
       workboxPluginMode: 'GenerateSW', // 'GenerateSW' or 'InjectManifest'
       workboxOptions: {}, // only for GenerateSW
       manifest: {
-        name: 'Quasar App',
-        short_name: 'Quasar App',
+        name: 'PokeMMO Chronicle',
+        short_name: 'PokeMMO Chronicle',
         description: 'A Quasar Framework app',
         display: 'standalone',
         orientation: 'portrait',
