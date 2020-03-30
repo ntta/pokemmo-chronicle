@@ -22201,7 +22201,7 @@
         "pokemonId386": {
             "nationalNo": 386,
             "name": "Deoxys",
-            "types": [],
+            "types": ["psychic"],
             "genderRatio": {
                 "male": 0,
                 "female": 0
@@ -22213,10 +22213,10 @@
             "height": "1.7",
             "weight": "60.8",
             "abilities": {},
-            "pvpTier": "",
+            "pvpTier": "N/A",
             "evYields": [],
             "eggGroups": [
-                "Genderless"
+                "Cannot Breed"
             ],
             "baseStats": {},
             "moves": [],

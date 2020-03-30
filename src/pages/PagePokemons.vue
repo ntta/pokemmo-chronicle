@@ -1,10 +1,14 @@
 
 <template>
-  <q-page padding>
+  <q-page
+    padding
+    class="grid-parent"
+  >
     <pokemon
       v-for="(pokemon, id) in pokemons"
       :key="id"
       :pokemon="pokemon"
+      class="pkm-info"
     >
     </pokemon>
   </q-page>
@@ -28,5 +32,10 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+  .grid-parent {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-gap: 1em;
+  }
 </style>

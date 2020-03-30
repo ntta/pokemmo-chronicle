@@ -1,21 +1,25 @@
 <template>
-  <div
-    class="column inline pkm-info"
-    :style="getBoxMargin()"
-  >
-    <div><img :src="getIconPath(pokemon.nationalNo)" /></div>
-    <div>#{{ getNationalNoStr(pokemon.nationalNo)}}</div>
-    <div class="pkm-name">{{ pokemon.name }}</div>
-    <div class="row inline">
-      <div
+    <q-item
+      class="column inline pkm-info"
+    >
+      <q-btn
+        @click="showPokemonDetail(pokemon)"
+      >
+        <img :src="getIconPath(pokemon.nationalNo)" />
+        <div class="pkm-name">
+          #{{ getNationalNoStr(pokemon.nationalNo)}}
+          <br />
+          {{ pokemon.name }}
+        </div>
+      </q-btn>
+      <q-btn rounded=""
         v-for="type in pokemon.types"
         :key="type"
+        :label="type"
         :class="getTypeClassMobile(type)"
       >
-        {{ type }}
-      </div>
-    </div>
-  </div>
+      </q-btn>
+    </q-item>
 </template>
 
 <script>
@@ -26,9 +30,11 @@ export default {
     }
   },
   methods: {
-    getBoxMargin () {
-      let margin = String(screen.width / 120 * 8) + 'px'
-      return 'margin: ' + margin
+    getTypeIcon (type) {
+      return 'https://www.serebii.net/pokedex-dp/type/' + type + '.gif'
+    },
+    showPokemonDetail (pokemon) {
+      console.log(pokemon)
     },
     getTypeClassMobile (type) {
       return 'pill background-color-' + type
@@ -54,8 +60,13 @@ export default {
 
 <style lang="scss">
   .pkm-info {
-    width: 120px;
-    height: 180px;
+    padding: 0px;
+  }
+
+  .pkm-name {
+    font-family: "Flexo-Demi",arial,sans-serif;
+    text-transform: none;
+    font-size: 120%;
   }
 
   .background-color-bug {
@@ -161,22 +172,8 @@ export default {
   }
 
   .pill {
-    font-family: "Flexo-Medium",arial,sans-serif;
-    border-radius: 3px;
-    line-height: 18px;
-    max-width: 110px;
-    margin: 0 1.5625% 0 0;
-    width: 38.4375%;
-    float: left;
+    width: 100%;
     text-transform: none;
-    font-size: 11px;
-    text-align: center;
-  }
-
-  .pkm-name {
-    font-family: "Flexo-Demi",arial,sans-serif;
-    text-transform: none;
-    font-size: 145%;
-    margin-bottom: 5px;
+    font-size: 100%;
   }
 </style>
