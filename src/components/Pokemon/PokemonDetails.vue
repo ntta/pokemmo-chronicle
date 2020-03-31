@@ -1,11 +1,4 @@
 <template>
-  <q-dialog
-    v-model="dialog"
-    persistent
-    :maximized="maximizedToggle"
-    transition-show="slide-up"
-    transition-hide="slide-down"
-  >
     <q-card class="bg-primary text-white">
       <q-bar>
         <q-space />
@@ -22,15 +15,13 @@
         {{ pokemon.name }}
       </q-card-section>
     </q-card>
-  </q-dialog>
 </template>
 
 <script>
 export default {
-  props: ['pokemon', 'dialog'],
+  props: ['pokemon'],
   data () {
     return {
-      maximizedToggle: true
     }
   }
 }
