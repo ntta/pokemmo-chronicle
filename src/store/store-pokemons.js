@@ -115,7 +115,7 @@ const state = {
 }
 
 const mutations = {
-  loadType (state, payload) {
+  loadPokemon (state, payload) {
     Vue.set(state.pokemons, payload.id, payload.name)
   }
 }
@@ -131,7 +131,7 @@ const actions = {
         id: snapshot.key,
         name: name
       }
-      commit('loadType', payload)
+      commit('loadPokemon', payload)
     })
   }
 }

@@ -3,7 +3,7 @@
     class="column inline pkm-info"
   >
     <q-btn
-      @click="dialog = true"
+      @click="pokemonDetailsDialog = true"
     >
       <img :src="getIconPath(pokemon.nationalNo)" />
       <div class="pkm-name">
@@ -12,25 +12,32 @@
         {{ pokemon.name }}
       </div>
     </q-btn>
-    <q-btn rounded=""
+    <q-btn
+      rounded
       v-for="type in pokemon.types"
       :key="type"
       :label="type"
       :class="getTypeClassMobile(type)"
-      @click="showPokemonHasType(type)"
+      @click="pokemonHaveTypeDialog = true; clickedType = type"
     >
     </q-btn>
     <q-dialog
-      v-model="dialog"
+      v-model="pokemonDetailsDialog"
       persistent
       :maximized="maximizedToggle"
       transition-show="slide-up"
       transition-hide="slide-down"
     >
-      <pokemon-details
-        :pokemon="pokemon"
-      >
-      </pokemon-details>
+      <pokemon-details :pokemon="pokemon" />
+    </q-dialog>
+    <q-dialog
+      v-model="pokemonHaveTypeDialog"
+      persistent
+      :maximized="maximizedToggle"
+      transition-show="slide-up"
+      transition-hide="slide-down"
+    >
+      <pokemon-have-type :type="clickedType" />
     </q-dialog>
   </q-item>
 </template>
@@ -40,16 +47,15 @@ export default {
   props: ['pokemon'],
   data () {
     return {
-      dialog: false,
+      pokemonDetailsDialog: false,
+      pokemonHaveTypeDialog: false,
+      clickedType: '',
       maximizedToggle: true
     }
   },
   methods: {
     showPokemonDetail (pokemon) {
       console.log(pokemon.name)
-    },
-    showPokemonHasType (type) {
-      console.log(type)
     },
     getTypeClassMobile (type) {
       return 'pill background-color-' + type
@@ -71,8 +77,10 @@ export default {
     }
   },
   components: {
-    'pokemon-details': require('components/Pokemon/PokemonDetails.vue').default
-  }
+    'pokemon-details': require('components/Pokemon/PokemonDetails.vue').default,
+    'pokemon-have-type': require('components/Pokemon/PokemonHaveType.vue').default
+  },
+  name: 'Pokemon'
 }
 </script>
 
