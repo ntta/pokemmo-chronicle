@@ -1,84 +1,76 @@
 <template>
-  <q-card
-    class="bg-grey-9 my-card pkm-details"
-    dark
-  >
-    <q-bar class="bg-grey-9">
+  <q-layout class="bg-grey-9 text-white">
+    <q-bar dense class="bg-black text-white">
+      <div>#{{ getNationalNoStr() }}</div>
       <q-space />
       <q-btn dense flat icon="close" v-close-popup>
         <q-tooltip content-class="bg-white text-primary">Close</q-tooltip>
       </q-btn>
     </q-bar>
-    <div class="q-pa-md">
-      <div class="row">
-        <div class="col-9">
+    <q-page-container>
+      <q-card class="row my-card pkm-card-top" dark flat>
+        <q-card-section class="col-8">
+          <div class="row">{{ pokemon.name }}</div>
+          <div class="row">{{ pokemon.species }}</div>
           <div class="row">
-            <div class="col-8">
-              {{ pokemon.name }}
-            </div>
-            <div class="col-4">
-              #{{ getNationalNoStr() }}
-            </div>
+            <img
+              v-for="type in pokemon.types"
+              :key="type"
+              :src="getTypeImage(type)"
+              class="pkm-type"
+            />
           </div>
-          <div class="row">
-            {{ pokemon.species }}
-          </div>
-          <div class="row">
-            <div class="col-6">
-              <img
-                v-for="type in pokemon.types"
-                :key="type"
-                :src="getTypeImage(type)"
-                class="pkm-type"
-              />
-            </div>
-          </div>
-        </div>
-        <q-img
-          class="col-3"
-          :src="getIconImage()"
-        />
-      </div>
-    </div>
+        </q-card-section>
+        <q-card-section class="col-4 pkm-card-top-image">
+          <img :src="getIconImage()" />
+        </q-card-section>
+      </q-card>
+      <q-tabs narrow-indicator v-model="pokemonDataTab">
+        <q-tab label="General" name="general" />
+        <q-tab label="Moves" name="moves" />
+        <q-tab label="Locations" name="locations" />
+        <q-tab label="Evolution Chain" name="evolution" />
+        <q-tab label="Sprites" name="sprites" />
+      </q-tabs>
 
-    <q-tabs narrow-indicator v-model="pokemonDataTab">
-      <q-tab label="G" name="general" />
-      <q-tab label="M" name="moves" />
-      <q-tab label="L" name="locations" />
-      <q-tab label="E" name="evolution" />
-      <q-tab label="S" name="sprites" />
-    </q-tabs>
+      <q-separator />
 
-    <q-separator />
-
-    <q-tab-panels v-model="pokemonDataTab" animated>
-      <q-tab-panel
-        name="general"
-      >
-        general
-      </q-tab-panel>
-      <q-tab-panel
-        name="moves"
-      >
-        moves
-      </q-tab-panel>
-      <q-tab-panel
-        name="locations"
-      >
-        locations
-      </q-tab-panel>
-      <q-tab-panel
-        name="evolution"
-      >
-        evolution
-      </q-tab-panel>
-      <q-tab-panel
-        name="sprites"
-      >
-        sprites
-      </q-tab-panel>
-    </q-tab-panels>
-  </q-card>
+      <q-tab-panels v-model="pokemonDataTab">
+        <q-tab-panel
+          name="general"
+          class="bg-grey-9 text-white"
+        >
+          <p>{{ pokemon.description }}</p>
+          <p>Height: {{ pokemon.height }} m</p>
+          <p>Weight: {{ pokemon.weight }} kg</p>
+        </q-tab-panel>
+        <q-tab-panel
+          name="moves"
+          class="bg-grey-9 text-white"
+        >
+          moves
+        </q-tab-panel>
+        <q-tab-panel
+          name="locations"
+          class="bg-grey-9 text-white"
+        >
+          locations
+        </q-tab-panel>
+        <q-tab-panel
+          name="evolution"
+          class="bg-grey-9 text-white"
+        >
+          evolution
+        </q-tab-panel>
+        <q-tab-panel
+          name="sprites"
+          class="bg-grey-9 text-white"
+        >
+          sprites
+        </q-tab-panel>
+      </q-tab-panels>
+    </q-page-container>
+  </q-layout>
 </template>
 
 <script>
@@ -117,16 +109,17 @@ export default {
 </script>
 
 <style lang="scss">
-  .pkm-details {
-    padding: 15px;
-    color: white;
+  .pkm-card-top {
+    padding: 8px;
+  }
+
+  .pkm-card-top-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .q-tab-panel {
     color: black;
-  }
-
-  .pkm-type {
-    padding: 0px 2px;
   }
 </style>

@@ -9,7 +9,7 @@
   >
     <q-card-section><q-img :src="getIconImage()" /></q-card-section>
     <q-card-section>#{{ getNationalNoStr()}}</q-card-section>
-    <q-card-section>{{ pokemon.name }}</q-card-section>
+    <q-card-section class="pkm-name">{{ pokemon.name }}</q-card-section>
     <q-card-section>
       <img
         v-for="type in pokemon.types"
@@ -78,12 +78,6 @@ export default {
   .pkm-card {
     padding: 0px;
     width: 100%;
-  }
-
-  .pkm-name {
-    font-family: "Flexo-Demi",arial,sans-serif;
-    text-transform: none;
-    font-size: 120%;
   }
 
   .pkm-type {
