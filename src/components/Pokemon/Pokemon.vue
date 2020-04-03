@@ -1,26 +1,22 @@
 <template>
-  <q-item
-    class="column inline pkm-info"
+  <q-card
+    dark
+    bordered
+    class="bg-grey-9 my-card pkm-info"
+    align="center"
+    clickable
+    @click="pokemonDetailsDialog = true"
   >
-    <q-btn
-      @click="pokemonDetailsDialog = true"
-    >
-      <img :src="getIconPath(pokemon.nationalNo)" />
-      <div class="pkm-name">
-        #{{ getNationalNoStr(pokemon.nationalNo)}}
-        <br />
-        {{ pokemon.name }}
-      </div>
-    </q-btn>
-    <q-btn
-      rounded
-      v-for="type in pokemon.types"
-      :key="type"
-      :label="type"
-      :class="getTypeClassMobile(type)"
-      @click="pokemonHaveTypeDialog = true; clickedType = type"
-    >
-    </q-btn>
+    <q-card-section><img :src="getIconImage(pokemon.nationalNo)" /></q-card-section>
+    <q-card-section>#{{ getNationalNoStr(pokemon.nationalNo)}}</q-card-section>
+    <q-card-section>{{ pokemon.name }}</q-card-section>
+    <q-card-section>
+      <img
+        v-for="type in pokemon.types"
+        :key="type"
+        :src="getTypeImage(type)"
+        class="pkm-type"
+      /></q-card-section>
     <q-dialog
       v-model="pokemonDetailsDialog"
       persistent
@@ -30,16 +26,7 @@
     >
       <pokemon-details :pokemon="pokemon" />
     </q-dialog>
-    <q-dialog
-      v-model="pokemonHaveTypeDialog"
-      persistent
-      :maximized="maximizedToggle"
-      transition-show="slide-up"
-      transition-hide="slide-down"
-    >
-      <pokemon-have-type :type="clickedType" />
-    </q-dialog>
-  </q-item>
+  </q-card>
 </template>
 
 <script>
@@ -48,14 +35,19 @@ export default {
   data () {
     return {
       pokemonDetailsDialog: false,
-      pokemonHaveTypeDialog: false,
-      clickedType: '',
       maximizedToggle: true
     }
   },
   methods: {
     showPokemonDetail (pokemon) {
       console.log(pokemon.name)
+    },
+    getTypeImage (type) {
+      if (type !== undefined) {
+        return '/statics/icons/types/' + type + '.png'
+      } else {
+        return ''
+      }
     },
     getTypeClassMobile (type) {
       return 'pill background-color-' + type
@@ -71,28 +63,35 @@ export default {
       }
       return nationalNoStr
     },
-    getIconPath (number) {
+    getIconImage (number) {
       let iconPath = '/statics/icons/pokemons/' + this.getNationalNoStr(number) + '.png'
       return iconPath
     }
   },
   components: {
-    'pokemon-details': require('components/Pokemon/PokemonDetails.vue').default,
-    'pokemon-have-type': require('components/Pokemon/PokemonHaveType.vue').default
+    'pokemon-details': require('components/Pokemon/PokemonDetails.vue').default
   },
   name: 'Pokemon'
 }
 </script>
 
 <style lang="scss">
+  .q-card__section {
+    padding: 0px;
+  }
   .pkm-info {
     padding: 0px;
+    width: 100%;
   }
 
   .pkm-name {
     font-family: "Flexo-Demi",arial,sans-serif;
     text-transform: none;
     font-size: 120%;
+  }
+
+  .pkm-type {
+    padding: 0px 2px;
   }
 
   .background-color-bug {

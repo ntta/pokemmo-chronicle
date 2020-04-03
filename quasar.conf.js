@@ -53,12 +53,10 @@ module.exports = function (ctx) {
         'QItem',
         'QItemSection',
         'QItemLabel',
-        'QTable',
-        'QTh',
-        'QTr',
-        'QTd',
-        'QImg',
-        'QDialog'
+        'QDialog',
+        'QCard',
+        'QCardSection',
+        'QCardActions'
       ],
       directives: [
         'ClosePopup'
