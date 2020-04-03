@@ -2,13 +2,13 @@
   <q-card
     dark
     bordered
-    class="bg-grey-9 my-card pkm-info"
+    class="bg-grey-9 my-card pkm-card"
     align="center"
     clickable
     @click="pokemonDetailsDialog = true"
   >
-    <q-card-section><img :src="getIconImage(pokemon.nationalNo)" /></q-card-section>
-    <q-card-section>#{{ getNationalNoStr(pokemon.nationalNo)}}</q-card-section>
+    <q-card-section><q-img :src="getIconImage()" /></q-card-section>
+    <q-card-section>#{{ getNationalNoStr()}}</q-card-section>
     <q-card-section>{{ pokemon.name }}</q-card-section>
     <q-card-section>
       <img
@@ -49,11 +49,9 @@ export default {
         return ''
       }
     },
-    getTypeClassMobile (type) {
-      return 'pill background-color-' + type
-    },
-    getNationalNoStr (number) {
+    getNationalNoStr () {
       let nationalNoStr = ''
+      let number = this.pokemon.nationalNo
       if (number < 10) {
         nationalNoStr = '00' + String(number)
       } else if (number < 100) {
@@ -63,15 +61,13 @@ export default {
       }
       return nationalNoStr
     },
-    getIconImage (number) {
-      let iconPath = '/statics/icons/pokemons/' + this.getNationalNoStr(number) + '.png'
-      return iconPath
+    getIconImage () {
+      return '/statics/icons/pokemons/' + this.getNationalNoStr() + '.png'
     }
   },
   components: {
     'pokemon-details': require('components/Pokemon/PokemonDetails.vue').default
-  },
-  name: 'Pokemon'
+  }
 }
 </script>
 
@@ -79,7 +75,7 @@ export default {
   .q-card__section {
     padding: 0px;
   }
-  .pkm-info {
+  .pkm-card {
     padding: 0px;
     width: 100%;
   }
@@ -92,96 +88,5 @@ export default {
 
   .pkm-type {
     padding: 0px 2px;
-  }
-
-  .background-color-bug {
-    background-color: #adbd21;
-    color: #fff;
-  }
-
-  .background-color-dark {
-    background-color: #735a4a;
-    color: #fff;
-  }
-
-  .background-color-dragon {
-    background-color: #7b63e7;
-    color: #fff;
-  }
-
-  .background-color-electric {
-    background-color: #ffc631;
-    color: #fff;
-  }
-
-  .background-color-fighting {
-    background-color: #a55239;
-    color: #fff;
-  }
-
-  .background-color-fire {
-    background-color: #f75231;
-    color: #fff;
-  }
-
-  .background-color-flying {
-    background-color: #9cadf7;
-    color: #fff;
-  }
-
-  .background-color-ghost {
-    background-color: #6363b5;
-    color: #fff;
-  }
-
-  .background-color-grass {
-    background-color: #7bce52;
-    color: #fff;
-  }
-
-  .background-color-ground {
-    background-color: #d6b55a;
-    color: #fff;
-  }
-
-  .background-color-ice {
-    background-color: #5acee7;
-    color: #fff;
-  }
-
-  .background-color-normal {
-    background-color: #ada594;
-    color: #fff;
-  }
-
-  .background-color-poison {
-    background-color: #b55aa5;
-    color: #fff;
-  }
-
-  .background-color-psychic {
-    background-color: #ff73a5;
-    color: #fff;
-  }
-
-  .background-color-rock {
-    background-color: #bda55a;
-    color: #fff;
-  }
-
-  .background-color-steel {
-    background-color: #adadc6;
-    color: #fff;
-  }
-
-  .background-color-water {
-    background-color: #399cff;
-    color: #fff;
-  }
-
-  .pill {
-    width: 100%;
-    text-transform: none;
-    font-size: 100%;
   }
 </style>

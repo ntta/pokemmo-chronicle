@@ -35,7 +35,7 @@ export default {
 <style lang="scss">
   .pkm-grid-parent {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     grid-gap: 1em;
   }
 </style>
