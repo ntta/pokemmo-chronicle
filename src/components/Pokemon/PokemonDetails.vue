@@ -40,33 +40,31 @@
           name="general"
           class="bg-grey-9 text-white"
         >
-          <p>{{ pokemon.description }}</p>
-          <p>Height: {{ pokemon.height }} m</p>
-          <p>Weight: {{ pokemon.weight }} kg</p>
+          <pokemon-details-general :pokemon="pokemon" />
         </q-tab-panel>
         <q-tab-panel
           name="moves"
           class="bg-grey-9 text-white"
         >
-          moves
+          <pokemon-details-moves :pokemon="pokemon" />
         </q-tab-panel>
         <q-tab-panel
           name="locations"
           class="bg-grey-9 text-white"
         >
-          locations
+          <pokemon-details-locations :pokemon="pokemon" />
         </q-tab-panel>
         <q-tab-panel
           name="evolution"
           class="bg-grey-9 text-white"
         >
-          evolution
+          <pokemon-details-evolution :pokemon="pokemon" />
         </q-tab-panel>
         <q-tab-panel
           name="sprites"
           class="bg-grey-9 text-white"
         >
-          sprites
+          <pokemon-details-sprites :pokemon="pokemon" />
         </q-tab-panel>
       </q-tab-panels>
     </q-page-container>
@@ -78,7 +76,29 @@ export default {
   props: ['pokemon'],
   data () {
     return {
-      pokemonDataTab: 'general'
+      pokemonDataTab: 'general',
+      pokemonTabs: [
+        {
+          name: 'general',
+          label: 'General'
+        },
+        {
+          name: 'moves',
+          label: 'Moves'
+        },
+        {
+          name: 'locations',
+          label: 'Locations'
+        },
+        {
+          name: 'evolution',
+          label: 'Evolution Chain'
+        },
+        {
+          name: 'sprites',
+          label: 'Sprites'
+        }
+      ]
     }
   },
   methods: {
@@ -104,6 +124,13 @@ export default {
     getIconImage () {
       return 'https://img.pokemondb.net/sprites/black-white/anim/normal/' + this.pokemon.name.toLowerCase() + '.gif'
     }
+  },
+  components: {
+    'pokemon-details-general': require('components/Pokemon/PokemonDetailsGeneral.vue').default,
+    'pokemon-details-moves': require('components/Pokemon/PokemonDetailsMoves.vue').default,
+    'pokemon-details-locations': require('components/Pokemon/PokemonDetailsLocations.vue').default,
+    'pokemon-details-evolution': require('components/Pokemon/PokemonDetailsEvolution.vue').default,
+    'pokemon-details-sprites': require('components/Pokemon/PokemonDetailsSprites.vue').default
   }
 }
 </script>
