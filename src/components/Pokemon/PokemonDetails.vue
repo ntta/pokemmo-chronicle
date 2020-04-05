@@ -122,7 +122,7 @@ export default {
       }
     },
     getGifIconImage () {
-      return 'https://img.pokemondb.net/sprites/black-white/anim/normal/' + this.pokemon.name.toLowerCase() + '.gif'
+      return '/statics/icons/pokemons/gif/' + this.getNationalNoStr() + '.gif'
     }
   },
   components: {
