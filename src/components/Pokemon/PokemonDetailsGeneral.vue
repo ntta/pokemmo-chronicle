@@ -77,7 +77,6 @@ export default {
   },
   methods: {
     getGenderLabel (gender, isMale) {
-      console.log(this.pokemon)
       let label = ''
       if (gender !== undefined && gender > 0) {
         label = (isMale ? '♂ ' : ' ♀') + String(gender.toFixed(1)) + '%'

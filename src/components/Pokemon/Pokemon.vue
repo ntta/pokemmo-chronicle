@@ -39,9 +39,6 @@ export default {
     }
   },
   methods: {
-    showPokemonDetail (pokemon) {
-      console.log(pokemon.name)
-    },
     getTypeImage (type) {
       if (type !== undefined) {
         return '/statics/icons/types/' + type + '.png'

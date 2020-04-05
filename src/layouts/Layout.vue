@@ -34,7 +34,6 @@
           :key="nav.name"
           :to="nav.to"
           class="text-grey-4"
-          @click="getCurrentPageLabel(nav.label)"
           clickable
           exact
         >
@@ -102,9 +101,17 @@ export default {
     }
   },
   methods: {
-    getCurrentPageLabel (label) {
-      this.currentPageLabel = label
+    getCurrentPageLabel () {
+      for (let i in this.navs) {
+        console.log(i)
+        if (window.location.href.includes(this.navs[i].to)) {
+          this.currentPageLabel = this.navs[i].label
+        }
+      }
     }
+  },
+  mounted () {
+    this.getCurrentPageLabel()
   }
 }
 </script>
