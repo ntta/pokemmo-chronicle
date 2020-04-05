@@ -2,7 +2,7 @@
   <q-card
     dark
     bordered
-    class="bg-grey-9 my-card pkm-card"
+    class="bg-grey-9 pkm-card"
     align="center"
     clickable
     @click="pokemonDetailsDialog = true"

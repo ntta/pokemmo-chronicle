@@ -8,7 +8,7 @@
       </q-btn>
     </q-bar>
     <q-page-container>
-      <q-card class="row my-card pkm-card-top" dark flat>
+      <q-card class="row pkm-card-top" dark flat>
         <q-card-section class="col-8">
           <div class="row">{{ pokemon.name }}</div>
           <div class="row">{{ pokemon.species }}</div>
@@ -22,7 +22,7 @@
           </div>
         </q-card-section>
         <q-card-section class="col-4 pkm-card-top-image">
-          <img :src="getIconImage()" />
+          <img :src="getGifIconImage()" />
         </q-card-section>
       </q-card>
       <q-tabs narrow-indicator v-model="pokemonDataTab">
@@ -121,7 +121,7 @@ export default {
         return ''
       }
     },
-    getIconImage () {
+    getGifIconImage () {
       return 'https://img.pokemondb.net/sprites/black-white/anim/normal/' + this.pokemon.name.toLowerCase() + '.gif'
     }
   },
