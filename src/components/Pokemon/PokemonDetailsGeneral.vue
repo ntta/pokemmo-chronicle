@@ -17,7 +17,7 @@
     <div class="row text-overline pkm-details-title">Gender Ratio</div>
     <div
       class="row pkm-details-content"
-      v-if="pokemon.genderRatio.male !== 0 && pokemon.genderRatio.female !== 0"
+      v-if="pokemon.genderRatio.male !== 0 || pokemon.genderRatio.female !== 0"
     >
         <q-linear-progress class="pkm-details-gender-male" :style="getGenderStyle(pokemon.genderRatio.male, true)" size="25px" :value="1">
           <div class="absolute-full flex flex-center">
@@ -44,7 +44,7 @@
     <div class="row pkm-details-title pkm-details-content">
       <q-btn
         color="white"
-        class="col bg-black pkm-details-button"
+        class="col bg-black pkm-details-button pkm-details-title"
         v-for="eggGroup in pokemon.eggGroups"
         :key="eggGroup"
         outline
@@ -56,7 +56,51 @@
     <q-card
       dark
       bordered
-      class="pkm-details-card pkm-details-title">
+      class="pkm-details-card pkm-details-title"
+      v-if="pokemon.evYields !== undefined"
+    >
+      <q-card-section
+        v-for="ev in pokemon.evYields"
+        :key="ev"
+      >
+        {{ ev }}
+      </q-card-section>
+    </q-card>
+    <div class="row text-overline pkm-details-title">EV Yields</div>
+    <q-card
+      dark
+      bordered
+      class="pkm-details-card pkm-details-title"
+      v-if="pokemon.evYields !== undefined"
+    >
+      <q-card-section
+        v-for="ev in pokemon.evYields"
+        :key="ev"
+      >
+        {{ ev }}
+      </q-card-section>
+    </q-card>
+    <div class="row text-overline pkm-details-title">EV Yields</div>
+    <q-card
+      dark
+      bordered
+      class="pkm-details-card pkm-details-title"
+      v-if="pokemon.evYields !== undefined"
+    >
+      <q-card-section
+        v-for="ev in pokemon.evYields"
+        :key="ev"
+      >
+        {{ ev }}
+      </q-card-section>
+    </q-card>
+    <div class="row text-overline pkm-details-title">EV Yields</div>
+    <q-card
+      dark
+      bordered
+      class="pkm-details-card pkm-details-title"
+      v-if="pokemon.evYields !== undefined"
+    >
       <q-card-section
         v-for="ev in pokemon.evYields"
         :key="ev"

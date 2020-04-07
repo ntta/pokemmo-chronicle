@@ -1,12 +1,14 @@
 <template>
-  <q-layout class="bg-grey-9 text-white">
-    <q-bar dense class="bg-black text-white">
-      <div>#{{ getNationalNoStr() }}</div>
-      <q-space />
-      <q-btn dense flat icon="close" v-close-popup>
-        <q-tooltip content-class="bg-white text-primary">Close</q-tooltip>
-      </q-btn>
-    </q-bar>
+  <q-layout view="hHh lpR fFf" class="bg-grey-9 text-white">
+    <q-header>
+      <q-bar dense class="bg-black text-white">
+        <div>#{{ getNationalNoStr() }}</div>
+        <q-space />
+        <q-btn dense flat icon="close" v-close-popup>
+          <q-tooltip content-class="bg-white text-primary">Close</q-tooltip>
+        </q-btn>
+      </q-bar>
+    </q-header>
     <q-page-container>
       <q-card class="row pkm-card-top" dark flat>
         <q-card-section class="col-8">
@@ -17,7 +19,7 @@
               v-for="type in pokemon.types"
               :key="type"
               :src="getTypeImage(type)"
-              class="pkm-type"
+              class="pkm-details-type"
             />
           </div>
         </q-card-section>
@@ -25,16 +27,6 @@
           <img :src="getGifIconImage()" />
         </q-card-section>
       </q-card>
-      <q-tabs narrow-indicator v-model="pokemonDataTab">
-        <q-tab label="General" name="general" />
-        <q-tab label="Moves" name="moves" />
-        <q-tab label="Locations" name="locations" />
-        <q-tab label="Evolution Chain" name="evolution" />
-        <q-tab label="Sprites" name="sprites" />
-      </q-tabs>
-
-      <q-separator />
-
       <q-tab-panels v-model="pokemonDataTab">
         <q-tab-panel
           name="general"
@@ -67,6 +59,16 @@
           <pokemon-details-sprites :pokemon="pokemon" />
         </q-tab-panel>
       </q-tab-panels>
+
+      <q-footer reveal bordered class="bg-grey-9 text-white">
+        <q-tabs narrow-indicator v-model="pokemonDataTab">
+          <q-tab label="General" name="general" />
+          <q-tab label="Moves" name="moves" />
+          <q-tab label="Locations" name="locations" />
+          <q-tab label="Evolution Chain" name="evolution" />
+          <q-tab label="Sprites" name="sprites" />
+        </q-tabs>
+      </q-footer>
     </q-page-container>
   </q-layout>
 </template>
@@ -76,6 +78,7 @@ export default {
   props: ['pokemon'],
   data () {
     return {
+      slide: 'style',
       pokemonDataTab: 'general',
       pokemonTabs: [
         {
@@ -103,6 +106,7 @@ export default {
   },
   methods: {
     getNationalNoStr () {
+      console.log(this.pokemon)
       let nationalNoStr = ''
       let number = this.pokemon.nationalNo
       if (number < 10) {
@@ -136,6 +140,17 @@ export default {
 </script>
 
 <style lang="scss">
+  .pkm-details-btn-form {
+    margin-right: 5px;
+    .q-btn__wrapper {
+      padding: 0px;
+    }
+  }
+
+  .pkm-details-type {
+    padding: 0px 2px 5px;
+  }
+
   .pkm-card-top {
     padding: 8px;
   }

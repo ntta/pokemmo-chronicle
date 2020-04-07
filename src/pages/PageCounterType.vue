@@ -9,7 +9,7 @@
             @click="addToSelectedTypes(pokemonType)"
             :disabled="selectedTypes.includes(pokemonType)">
             <q-avatar size="50px">
-              <img :src="'/statics/types/'+pokemonType.name+'-icon.png'">
+              <img :src="'/statics/icons/types/'+pokemonType.name+'.png'">
             </q-avatar>
           </q-btn>
       </div>
@@ -24,7 +24,7 @@
           <q-btn round
             @click="removeFromSelectedTypes(pokemonType)">
             <q-avatar size="50px">
-              <img :src="'/statics/types/'+pokemonType.name+'-icon.png'">
+              <img :src="'/statics/icons/types/'+pokemonType.name+'.png'">
             </q-avatar>
           </q-btn>
       </div>
@@ -37,7 +37,7 @@
           <q-item v-for="weakness in totalWeakness" :key="weakness.type" class="q-my-sm" :class="getWeaknessClass(weakness.factor)">
             <q-item-section avatar>
               <q-avatar size="30px">
-                <img :src="'/statics/types/'+weakness.type+'-icon.png'">
+                <img :src="'/statics/icons/types/'+weakness.type+'.png'">
               </q-avatar>
             </q-item-section>
 
