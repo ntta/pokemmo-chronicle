@@ -66,48 +66,6 @@
         {{ ev }}
       </q-card-section>
     </q-card>
-    <div class="row text-overline pkm-details-title">EV Yields</div>
-    <q-card
-      dark
-      bordered
-      class="pkm-details-card pkm-details-title"
-      v-if="pokemon.evYields !== undefined"
-    >
-      <q-card-section
-        v-for="ev in pokemon.evYields"
-        :key="ev"
-      >
-        {{ ev }}
-      </q-card-section>
-    </q-card>
-    <div class="row text-overline pkm-details-title">EV Yields</div>
-    <q-card
-      dark
-      bordered
-      class="pkm-details-card pkm-details-title"
-      v-if="pokemon.evYields !== undefined"
-    >
-      <q-card-section
-        v-for="ev in pokemon.evYields"
-        :key="ev"
-      >
-        {{ ev }}
-      </q-card-section>
-    </q-card>
-    <div class="row text-overline pkm-details-title">EV Yields</div>
-    <q-card
-      dark
-      bordered
-      class="pkm-details-card pkm-details-title"
-      v-if="pokemon.evYields !== undefined"
-    >
-      <q-card-section
-        v-for="ev in pokemon.evYields"
-        :key="ev"
-      >
-        {{ ev }}
-      </q-card-section>
-    </q-card>
   </div>
 </template>
 

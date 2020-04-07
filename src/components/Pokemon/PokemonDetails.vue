@@ -2,7 +2,7 @@
   <q-layout view="hHh lpR fFf" class="bg-grey-9 text-white">
     <q-header>
       <q-bar dense class="bg-black text-white">
-        <div>#{{ getNationalNoStr() }}</div>
+        <div>#{{ getNationalNoStr() }} - {{ pokemon.name }}</div>
         <q-space />
         <q-btn dense flat icon="close" v-close-popup>
           <q-tooltip content-class="bg-white text-primary">Close</q-tooltip>
@@ -12,7 +12,7 @@
     <q-page-container>
       <q-card class="row pkm-card-top" dark flat>
         <q-card-section class="col-8">
-          <div class="row">{{ pokemon.name }}</div>
+          <div class="row">{{ pokemon.name }}{{ getFormName() }}</div>
           <div class="row">{{ pokemon.species }}</div>
           <div class="row">
             <img
@@ -106,7 +106,6 @@ export default {
   },
   methods: {
     getNationalNoStr () {
-      console.log(this.pokemon)
       let nationalNoStr = ''
       let number = this.pokemon.nationalNo
       if (number < 10) {
@@ -126,7 +125,22 @@ export default {
       }
     },
     getGifIconImage () {
-      return '/statics/icons/pokemons/gif/' + this.getNationalNoStr() + '.gif'
+      let imgagePath = '/statics/icons/pokemons/gif/' + this.getNationalNoStr() + '.gif'
+      if (this.pokemon.sprites !== undefined) {
+        if (this.pokemon.sprites.male !== undefined) {
+          imgagePath = '/statics/sprites/pokemons/gif/' + this.pokemon.sprites.male.normal.front + '.gif'
+        } else {
+          imgagePath = '/statics/sprites/pokemons/gif/' + this.pokemon.sprites.normal.front + '.gif'
+        }
+      }
+      return imgagePath
+    },
+    getFormName () {
+      let formName = ''
+      if (this.pokemon.formName !== undefined && this.pokemon.formName !== '') {
+        formName = ' - ' + this.pokemon.formName
+      }
+      return formName
     }
   },
   components: {
