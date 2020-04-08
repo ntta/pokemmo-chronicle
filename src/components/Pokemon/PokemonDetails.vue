@@ -35,6 +35,12 @@
           <pokemon-details-general :pokemon="pokemon" />
         </q-tab-panel>
         <q-tab-panel
+          name="sprites"
+          class="bg-grey-9 text-white"
+        >
+          <pokemon-details-sprites :pokemon="pokemon" />
+        </q-tab-panel>
+        <q-tab-panel
           name="moves"
           class="bg-grey-9 text-white"
         >
@@ -52,21 +58,15 @@
         >
           <pokemon-details-evolution :pokemon="pokemon" />
         </q-tab-panel>
-        <q-tab-panel
-          name="sprites"
-          class="bg-grey-9 text-white"
-        >
-          <pokemon-details-sprites :pokemon="pokemon" />
-        </q-tab-panel>
       </q-tab-panels>
 
       <q-footer reveal bordered class="bg-grey-9 text-white">
         <q-tabs narrow-indicator v-model="pokemonDataTab">
           <q-tab label="General" name="general" />
+          <q-tab label="Sprites" name="sprites" />
           <q-tab label="Moves" name="moves" />
           <q-tab label="Locations" name="locations" />
           <q-tab label="Evolution Chain" name="evolution" />
-          <q-tab label="Sprites" name="sprites" />
         </q-tabs>
       </q-footer>
     </q-page-container>
@@ -125,15 +125,13 @@ export default {
       }
     },
     getGifIconImage () {
-      let imgagePath = '/statics/icons/pokemons/gif/' + this.getNationalNoStr() + '.gif'
-      if (this.pokemon.sprites !== undefined) {
-        if (this.pokemon.sprites.male !== undefined) {
-          imgagePath = '/statics/sprites/pokemons/gif/' + this.pokemon.sprites.male.normal.front + '.gif'
-        } else {
-          imgagePath = '/statics/sprites/pokemons/gif/' + this.pokemon.sprites.normal.front + '.gif'
-        }
+      let imagePath = ''
+      if (this.pokemon.sprites.male !== undefined) {
+        imagePath = '/statics/sprites/pokemons/gif/' + this.pokemon.sprites.male.normal.front + '.gif'
+      } else {
+        imagePath = '/statics/sprites/pokemons/gif/' + this.pokemon.sprites.normal.front + '.gif'
       }
-      return imgagePath
+      return imagePath
     },
     getFormName () {
       let formName = ''

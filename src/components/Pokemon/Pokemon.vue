@@ -59,15 +59,13 @@ export default {
       return nationalNoStr
     },
     getIconImage () {
-      let imgagePath = '/statics/icons/pokemons/' + this.getNationalNoStr() + '.png'
-      if (this.pokemon.sprites !== undefined) {
-        if (this.pokemon.sprites.male !== undefined) {
-          imgagePath = '/statics/sprites/pokemons/png/' + this.pokemon.sprites.male.normal.front + '.png'
-        } else {
-          imgagePath = '/statics/sprites/pokemons/png/' + this.pokemon.sprites.normal.front + '.png'
-        }
+      let imagePath = ''
+      if (this.pokemon.sprites.male !== undefined) {
+        imagePath = '/statics/sprites/pokemons/png/' + this.pokemon.sprites.male.normal.front + '.png'
+      } else {
+        imagePath = '/statics/sprites/pokemons/png/' + this.pokemon.sprites.normal.front + '.png'
       }
-      return imgagePath
+      return imagePath
     }
   },
   components: {
