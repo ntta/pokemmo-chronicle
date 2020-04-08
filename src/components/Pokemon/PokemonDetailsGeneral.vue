@@ -53,18 +53,76 @@
       </q-btn>
     </div>
     <div class="row text-overline pkm-details-title">EV Yields</div>
-    <q-card
-      dark
-      bordered
-      class="pkm-details-card pkm-details-title"
-      v-if="pokemon.evYields !== undefined"
-    >
+    <q-card dark bordered class="pkm-details-card pkm-details-title">
       <q-card-section
         v-for="ev in pokemon.evYields"
         :key="ev"
       >
         {{ ev }}
       </q-card-section>
+    </q-card>
+    <div class="row text-overline pkm-details-title">Base Stats</div>
+    <q-card class="pkm-details-card" dark bordered>
+      <div class="row pkm-details-title">
+        <div class="col-4">HP</div>
+        <div class="col-8">
+          <q-linear-progress dark size="100%" :value="pokemon.baseStats.hp/maxStat" color="warning">
+              <div class="absolute-full flex flex-center">
+                <q-badge color="transparent" text-color="black" class="pkm-details-base-stats-text" :label="pokemon.baseStats.hp" />
+              </div>
+          </q-linear-progress>
+        </div>
+      </div>
+      <div class="row pkm-details-title">
+        <div class="col-4">Attack</div>
+        <div class="col-8">
+          <q-linear-progress dark size="100%" :value="pokemon.baseStats.attack/maxStat" color="warning">
+              <div class="absolute-full flex flex-center">
+                <q-badge color="transparent" text-color="black" class="pkm-details-base-stats-text" :label="pokemon.baseStats.attack" />
+              </div>
+          </q-linear-progress>
+        </div>
+      </div>
+      <div class="row pkm-details-title">
+        <div class="col-4">Defense</div>
+        <div class="col-8">
+          <q-linear-progress dark size="100%" :value="pokemon.baseStats.defense/maxStat" color="warning">
+              <div class="absolute-full flex flex-center">
+                <q-badge color="transparent" text-color="black" class="pkm-details-base-stats-text" :label="pokemon.baseStats.defense" />
+              </div>
+          </q-linear-progress>
+        </div>
+      </div>
+      <div class="row pkm-details-title">
+        <div class="col-4">Sp. Attack</div>
+        <div class="col-8">
+          <q-linear-progress dark size="100%" :value="pokemon.baseStats.spAttack/maxStat" color="warning">
+              <div class="absolute-full flex flex-center">
+                <q-badge color="transparent" text-color="black" class="pkm-details-base-stats-text" :label="pokemon.baseStats.spAttack" />
+              </div>
+          </q-linear-progress>
+        </div>
+      </div>
+      <div class="row pkm-details-title">
+        <div class="col-4">Sp. Defense</div>
+        <div class="col-8">
+          <q-linear-progress dark size="100%" :value="pokemon.baseStats.spDefense/maxStat" color="warning">
+              <div class="absolute-full flex flex-center">
+                <q-badge color="transparent" text-color="black" class="pkm-details-base-stats-text" :label="pokemon.baseStats.spDefense" />
+              </div>
+          </q-linear-progress>
+        </div>
+      </div>
+      <div class="row pkm-details-title">
+        <div class="col-4">Speed</div>
+        <div class="col-8">
+          <q-linear-progress dark size="100%" :value="pokemon.baseStats.speed/maxStat" color="warning">
+              <div class="absolute-full flex flex-center">
+                <q-badge color="transparent" text-color="black" class="pkm-details-base-stats-text" :label="pokemon.baseStats.speed" />
+              </div>
+          </q-linear-progress>
+        </div>
+      </div>
     </q-card>
   </div>
 </template>
@@ -74,7 +132,8 @@ export default {
   props: ['pokemon'],
   data () {
     return {
-      pokemonIsGenderless: this.pokemon.name + ' is genderless'
+      pokemonIsGenderless: this.pokemon.name + ' is genderless',
+      maxStat: Math.max(this.pokemon.baseStats.hp, this.pokemon.baseStats.attack, this.pokemon.baseStats.defense, this.pokemon.baseStats.spAttack, this.pokemon.baseStats.spDefense, this.pokemon.baseStats.speed)
     }
   },
   methods: {
@@ -107,6 +166,11 @@ export default {
 </script>
 
 <style lang="scss">
+  .pkm-details-base-stats-text {
+    font-size: 80%;
+    font-weight: bold;
+  }
+
   .pkm-details-button {
     margin: 0 5px;
   }
