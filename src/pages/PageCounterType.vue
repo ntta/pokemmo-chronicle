@@ -1,33 +1,27 @@
 <template>
   <q-page padding>
-    <div class="row">
-      <div class="q-pa-sm"
-          v-for="(pokemonType, key) in types"
-          :key="key">
-          <p class="pkm-type-name">{{ upperFirstLetter(pokemonType.name) }}</p>
-          <q-btn round
-            @click="addToSelectedTypes(pokemonType)"
-            :disabled="selectedTypes.includes(pokemonType)">
-            <q-avatar size="50px">
-              <img :src="'/statics/icons/types/'+pokemonType.name+'.png'">
-            </q-avatar>
-          </q-btn>
-      </div>
+    <div class="pkm-grid-parent">
+      <q-btn
+        v-for="(pokemonType, key) in types"
+        :key="key"
+        clickable
+        @click="addToSelectedTypes(pokemonType)"
+        :disabled="selectedTypes.includes(pokemonType)"
+      >
+        <img :src="'/statics/icons/types/bigger/'+pokemonType.name+'.png'" />
+      </q-btn>
     </div>
     <hr />
     <p>Selected types</p>
     <div class="row">
-      <div class="q-pa-sm"
-          v-for="(pokemonType, key) in selectedTypes"
-          :key="key">
-          <p class="pkm-type-name">{{ upperFirstLetter(pokemonType.name) }}</p>
-          <q-btn round
-            @click="removeFromSelectedTypes(pokemonType)">
-            <q-avatar size="50px">
-              <img :src="'/statics/icons/types/'+pokemonType.name+'.png'">
-            </q-avatar>
-          </q-btn>
-      </div>
+      <q-btn
+        v-for="(pokemonType, key) in selectedTypes"
+        :key="key"
+        clickable
+        @click="removeFromSelectedTypes(pokemonType)"
+      >
+        <img :src="'/statics/icons/types/bigger/'+pokemonType.name+'.png'" />
+      </q-btn>
     </div>
     <hr />
     <div class="pkm-type-weakness">
@@ -135,6 +129,17 @@ export default {
 </script>
 
 <style lang="scss">
+button:disabled {
+  background: black;
+  filter: grayscale(100%)
+}
+
+.pkm-grid-parent {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(51px, 1fr));
+    grid-gap: 1em;
+  }
+
 .q-pa-sm {
   .pkm-type-name {
     text-align: center;
