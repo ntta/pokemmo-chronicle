@@ -21,13 +21,16 @@ export default {
     ...mapGetters('pokemons', ['pokemons'])
   },
   methods: {
-    ...mapActions('pokemons', ['fbReadData'])
+    ...mapActions('pokemons', ['fbReadPokemons'])
   },
   components: {
     'pokemon': require('components/Pokemon/Pokemon.vue').default
   },
   mounted () {
-    this.fbReadData()
+    if (Object.keys(this.pokemons).length === 0) {
+      console.log('Loading Pokemons...')
+      this.fbReadPokemons()
+    }
   }
 }
 </script>

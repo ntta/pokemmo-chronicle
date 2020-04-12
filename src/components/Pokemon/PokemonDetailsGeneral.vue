@@ -42,25 +42,32 @@
     </div>
     <div class="row text-overline pkm-details-title">Egg Groups</div>
     <div class="row pkm-details-title pkm-details-content">
-      <q-btn
-        color="white"
-        class="col bg-black pkm-details-button pkm-details-title"
+      <q-card
+        class="col pkm-details-card"
+        align="center"
+        dark
+        bordered
         v-for="eggGroup in pokemon.eggGroups"
         :key="eggGroup"
-        outline
       >
         {{ eggGroup }}
-      </q-btn>
+      </q-card>
     </div>
-    <div class="row text-overline pkm-details-title">EV Yields</div>
-    <q-card dark bordered class="pkm-details-card pkm-details-title">
-      <q-card-section
-        v-for="ev in pokemon.evYields"
-        :key="ev"
-      >
-        {{ ev }}
-      </q-card-section>
-    </q-card>
+    <div class="row text-overline pkm-details-title">
+      <div class="col">PvP Tier</div>
+      <div class="col">EV Yields</div>
+    </div>
+    <div class="row">
+      <q-card class="col pkm-details-card" align="center" dark bordered>{{ pokemon.pvpTier }}</q-card>
+      <q-card class="col pkm-details-card" align="center" dark bordered>
+        <q-card-section
+          v-for="ev in pokemon.evYields"
+          :key="ev"
+        >
+          {{ ev }}
+        </q-card-section>
+      </q-card>
+    </div>
     <div class="row text-overline pkm-details-title">Base Stats</div>
     <q-card class="pkm-details-card" dark bordered>
       <div class="row pkm-details-title">

@@ -1,6 +1,6 @@
 <template>
   <q-page padding>
-    <div class="pkm-grid-parent">
+    <div class="pkm-grid-counter">
       <q-btn
         v-for="(pokemonType, key) in types"
         :key="key"
@@ -77,7 +77,7 @@ export default {
     ...mapGetters('types', ['types'])
   },
   methods: {
-    ...mapActions('types', ['fbReadData']),
+    ...mapActions('types', ['fbReadTypes']),
     addToSelectedTypes (type) {
       if (this.selectedTypes.length === 2) {
         return
@@ -122,7 +122,10 @@ export default {
     }
   },
   mounted () {
-    this.fbReadData()
+    if (Object.keys(this.types).length === 0) {
+      console.log('Loading Pokemon types...')
+      this.fbReadTypes()
+    }
   }
 }
 
@@ -134,7 +137,7 @@ button:disabled {
   filter: grayscale(100%)
 }
 
-.pkm-grid-parent {
+.pkm-grid-counter {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(51px, 1fr));
     grid-gap: 1em;

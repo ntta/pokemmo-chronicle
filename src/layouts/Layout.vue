@@ -86,6 +86,12 @@ export default {
           to: '/counter'
         },
         {
+          name: 'statCalculator',
+          label: 'Stat Calculator',
+          icon: 'keyboard',
+          to: '/stat-calculator'
+        },
+        {
           name: 'settings',
           label: 'Settings',
           icon: 'settings',

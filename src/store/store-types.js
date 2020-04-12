@@ -11,7 +11,7 @@ const mutations = {
 }
 
 const actions = {
-  fbReadData ({ commit }) {
+  fbReadTypes ({ commit }) {
     let pokemonTypes = firebaseDb.ref('types/')
 
     // child added

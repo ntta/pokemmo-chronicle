@@ -25,6 +25,36 @@ Pokedex of PokeMMO
 144, 145, 146, 150, 151, 243, 244, 245, 249, 250, 251, 377, 378, 379, 380, 381, 382, 383, 384, 385, 386, 480, 481, 482, 485, 486, 488, 489, 490, 491, 492, 493, 494, 638, 639, 640, 641, 642
 ```
 ---
+## Moves
+### Moves that don't have details (since they can only learnt by unavailable pokemons)
+```
+Dark Void
+Doom Desire
+Freeze Shock
+Fusion Flare
+Glaciate
+Heart Swap
+Ice Burn
+Judgment
+Lunar Dance
+Luster Purge
+Magma Storm
+Mist Ball
+Psycho Boost
+Psystrike
+Relic Song
+Roar of Time
+Sacred Fire
+Sacred Sword
+Searing Shot
+Secret Sword
+Seed Flare
+Shadow Force
+Spacial Rend
+Techno Blast
+V-create
+```
+---
 ## Install the dependencies
 ```bash
 npm install
