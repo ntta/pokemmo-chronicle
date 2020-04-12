@@ -7,6 +7,7 @@ const routes = [
       { path: '/', component: () => import('pages/PageNews.vue') },
       { path: '/pokemons', component: () => import('pages/PagePokemons.vue') },
       { path: '/abilities', component: () => import('pages/PageAbilities.vue') },
+      { path: '/moves', component: () => import('pages/PageMoves.vue') },
       { path: '/counter', component: () => import('pages/PageCounterType.vue') },
       { path: '/stat-calculator', component: () => import('pages/PageStatCalculator.vue') },
       { path: '/settings', component: () => import('pages/PageSettings.vue') },

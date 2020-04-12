@@ -3,6 +3,7 @@ import Vuex from 'vuex'
 
 import types from './store-types'
 import pokemons from './store-pokemons'
+import moves from './store-moves'
 
 Vue.use(Vuex)
 
@@ -19,7 +20,8 @@ export default function (/* { ssrContext } */) {
   const Store = new Vuex.Store({
     modules: {
       types,
-      pokemons
+      pokemons,
+      moves
     },
 
     // enable strict mode (adds overhead!)

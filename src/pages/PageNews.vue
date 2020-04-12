@@ -22,11 +22,13 @@ import { mapGetters, mapActions } from 'vuex'
 export default {
   computed: {
     ...mapGetters('pokemons', ['pokemons']),
-    ...mapGetters('types', ['types'])
+    ...mapGetters('types', ['types']),
+    ...mapGetters('moves', ['moves'])
   },
   methods: {
     ...mapActions('pokemons', ['fbReadPokemons']),
-    ...mapActions('types', ['fbReadTypes'])
+    ...mapActions('types', ['fbReadTypes']),
+    ...mapActions('moves', ['fbReadMoves'])
   },
   mounted () {
     if (Object.keys(this.pokemons).length === 0) {
@@ -36,6 +38,10 @@ export default {
     if (Object.keys(this.types).length === 0) {
       console.log('Loading Pokemon types...')
       this.fbReadTypes()
+    }
+    if (Object.keys(this.moves).length === 0) {
+      console.log('Loading Pokemon moves...')
+      this.fbReadMoves()
     }
   }
 }

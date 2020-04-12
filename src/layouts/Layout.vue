@@ -80,6 +80,12 @@ export default {
           to: '/abilities'
         },
         {
+          name: 'moves',
+          label: 'Moves',
+          icon: 'dynamic_feed',
+          to: '/moves'
+        },
+        {
           name: 'counter',
           label: 'Counter',
           icon: 'compare_arrows',
